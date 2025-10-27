@@ -1,0 +1,101 @@
+id_producto,nombre_producto,categoria,precio_unitario,rango_precio,categoria_Alimentos,categoria_Limpieza
+1,Coca Cola 1.5L,Alimentos,2347,Medio,1,0
+2,Pepsi 1.5L,Limpieza,4973,Muy Alto,0,1
+3,Sprite 1.5L,Alimentos,4964,Muy Alto,1,0
+4,Fanta Naranja 1.5L,Limpieza,2033,Bajo,0,1
+5,Agua Mineral 500Ml,Alimentos,4777,Muy Alto,1,0
+6,Jugo De Naranja 1L,Limpieza,4170,Muy Alto,0,1
+7,Jugo De Manzana 1L,Alimentos,3269,Alto,1,0
+8,Energética Nitro 500Ml,Limpieza,4218,Muy Alto,0,1
+9,Yerba Mate Suave 1Kg,Alimentos,3878,Alto,1,0
+10,Yerba Mate Intensa 1Kg,Limpieza,4883,Muy Alto,0,1
+11,Café Molido 250G,Alimentos,2053,Bajo,1,0
+12,Té Negro 20 Saquitos,Limpieza,570,Muy Bajo,0,1
+13,Té Verde 20 Saquitos,Alimentos,2383,Medio,1,0
+14,Leche Entera 1L,Limpieza,1723,Bajo,0,1
+15,Leche Descremada 1L,Alimentos,2538,Medio,1,0
+16,Yogur Natural 200G,Limpieza,4613,Muy Alto,0,1
+17,Queso Cremoso 500G,Alimentos,4834,Muy Alto,1,0
+18,Queso Rallado 150G,Limpieza,3444,Alto,0,1
+19,Manteca 200G,Alimentos,3251,Alto,1,0
+20,Pan Lactal Blanco,Limpieza,1571,Bajo,0,1
+21,Pan Lactal Integral,Alimentos,272,Muy Bajo,1,0
+22,Medialunas De Manteca,Limpieza,2069,Bajo,0,1
+23,Bizcochos Salados,Alimentos,2380,Medio,1,0
+24,Galletitas Chocolate,Limpieza,1305,Bajo,0,1
+25,Galletitas Vainilla,Alimentos,4015,Alto,1,0
+26,Alfajor Triple,Limpieza,1001,Muy Bajo,0,1
+27,Alfajor Simple,Alimentos,2502,Medio,1,0
+28,Papas Fritas Clásicas 100G,Limpieza,936,Muy Bajo,0,1
+29,Papas Fritas Onduladas 100G,Alimentos,1868,Bajo,1,0
+30,Maní Salado 200G,Limpieza,4875,Muy Alto,0,1
+31,Mix De Frutos Secos 200G,Alimentos,3409,Alto,1,0
+32,Chocolate Amargo 100G,Limpieza,2234,Medio,0,1
+33,Chocolate Con Leche 100G,Alimentos,1255,Bajo,1,0
+34,Turrón 50G,Limpieza,503,Muy Bajo,0,1
+35,Barrita De Cereal 30G,Alimentos,4430,Muy Alto,1,0
+36,Dulce De Leche 400G,Limpieza,2559,Medio,0,1
+37,Mermelada De Durazno 400G,Alimentos,3196,Alto,1,0
+38,Mermelada De Frutilla 400G,Limpieza,1584,Bajo,0,1
+39,Helado Vainilla 1L,Alimentos,469,Muy Bajo,1,0
+40,Helado Chocolate 1L,Limpieza,1215,Bajo,0,1
+41,Aceite De Girasol 1L,Alimentos,860,Muy Bajo,1,0
+42,Vinagre De Alcohol 500Ml,Limpieza,1195,Muy Bajo,0,1
+43,Salsa De Tomate 500G,Alimentos,887,Muy Bajo,1,0
+44,Arroz Largo Fino 1Kg,Limpieza,2979,Medio,0,1
+45,Fideos Spaghetti 500G,Alimentos,745,Muy Bajo,1,0
+46,Lentejas Secas 500G,Limpieza,3036,Medio,0,1
+47,Garbanzos 500G,Alimentos,2939,Medio,1,0
+48,Porotos Negros 500G,Limpieza,4462,Muy Alto,0,1
+49,Harina De Trigo 1Kg,Alimentos,2512,Medio,1,0
+50,Azúcar 1Kg,Limpieza,727,Muy Bajo,0,1
+51,Sal Fina 500G,Alimentos,1745,Bajo,1,0
+52,Detergente Líquido 750Ml,Limpieza,2582,Medio,0,1
+53,Lavandina 1L,Alimentos,1664,Bajo,1,0
+54,Jabón De Tocador,Limpieza,1592,Bajo,0,1
+55,Shampoo 400Ml,Alimentos,1407,Bajo,1,0
+56,Papel Higiénico X4,Limpieza,2532,Medio,0,1
+57,Servilletas X100,Alimentos,4520,Muy Alto,1,0
+58,Caramelos Masticables,Limpieza,4752,Muy Alto,0,1
+59,Chicle Menta,Alimentos,3612,Alto,1,0
+60,Chupetín,Limpieza,4647,Muy Alto,0,1
+61,Miel Pura 250G,Alimentos,4982,Muy Alto,1,0
+62,Stevia 100 Sobres,Limpieza,3848,Alto,0,1
+63,Granola 250G,Alimentos,4337,Muy Alto,1,0
+64,Avena Instantánea 250G,Limpieza,3953,Alto,0,1
+65,Cerveza Rubia 1L,Alimentos,2423,Medio,1,0
+66,Cerveza Negra 1L,Limpieza,1533,Bajo,0,1
+67,Vino Tinto Malbec 750Ml,Alimentos,4719,Muy Alto,1,0
+68,Vino Blanco 750Ml,Limpieza,2684,Medio,0,1
+69,Sidra 750Ml,Alimentos,744,Muy Bajo,1,0
+70,Fernet 750Ml,Limpieza,4061,Muy Alto,0,1
+71,Vodka 700Ml,Alimentos,508,Muy Bajo,1,0
+72,Ron 700Ml,Limpieza,3876,Alto,0,1
+73,Gin 700Ml,Alimentos,1561,Bajo,1,0
+74,Whisky 750Ml,Limpieza,2953,Medio,0,1
+75,Licor De Café 700Ml,Alimentos,3204,Alto,1,0
+76,Pizza Congelada Muzzarella,Limpieza,4286,Muy Alto,0,1
+77,Empanadas Congeladas,Alimentos,4778,Muy Alto,1,0
+78,Verduras Congeladas Mix,Limpieza,4289,Muy Alto,0,1
+79,Hamburguesas Congeladas X4,Alimentos,2420,Medio,1,0
+80,Helado De Frutilla 1L,Limpieza,1981,Bajo,0,1
+81,Aceitunas Verdes 200G,Alimentos,2520,Medio,1,0
+82,Aceitunas Negras 200G,Limpieza,2394,Medio,0,1
+83,Queso Untable 190G,Alimentos,1830,Bajo,1,0
+84,Queso Azul 150G,Limpieza,1645,Bajo,0,1
+85,Jugo En Polvo Naranja,Alimentos,1856,Bajo,1,0
+86,Jugo En Polvo Limón,Limpieza,4090,Muy Alto,0,1
+87,Sopa Instantánea Pollo,Alimentos,1679,Bajo,1,0
+88,Caldo Concentrado Carne,Limpieza,2570,Medio,0,1
+89,Caldo Concentrado Verdura,Alimentos,1003,Muy Bajo,1,0
+90,Toallas Húmedas X50,Limpieza,2902,Medio,0,1
+91,Desodorante Aerosol,Alimentos,4690,Muy Alto,1,0
+92,Crema Dental 90G,Limpieza,2512,Medio,0,1
+93,Cepillo De Dientes,Alimentos,2142,Bajo,1,0
+94,Hilo Dental,Limpieza,1418,Bajo,0,1
+95,Mascarilla Capilar,Alimentos,1581,Bajo,1,0
+96,Suavizante 1L,Limpieza,4920,Muy Alto,0,1
+97,Limpiavidrios 500Ml,Alimentos,872,Muy Bajo,1,0
+98,Desengrasante 500Ml,Limpieza,2843,Medio,0,1
+99,Esponjas X3,Alimentos,2430,Medio,1,0
+100,Trapo De Piso,Limpieza,4854,Muy Alto,0,1

@@ -1,0 +1,25 @@
+
+REPORTE DE LIMPIEZA - TABLA PRODUCTOS
+=====================================
+Fecha de procesamiento: 2025-10-24 23:46:27
+
+RESUMEN:
+- Registros originales: 100
+- Registros finales: 100
+- Registros eliminados: 0
+
+TRANSFORMACIONES APLICADAS:
+1. Eliminación de espacios extra
+2. Estandarización de nombres de productos
+3. Estandarización de categorías
+4. Conversión de precios a formato numérico
+5. Eliminación de duplicados
+6. Optimización de tipos de datos
+7. Creación de columnas derivadas
+
+COLUMNAS FINALES:
+['id_producto', 'nombre_producto', 'categoria', 'precio_unitario', 'rango_precio', 'categoria_Alimentos', 'categoria_Limpieza']
+
+CALIDAD FINAL:
+- Total de productos: 100
+- Columnas procesadas: 7
