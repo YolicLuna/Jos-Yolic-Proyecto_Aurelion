@@ -205,7 +205,7 @@ Realizar un **análisis estadístico descriptivo detallado** sobre los cuatro da
 
 ## 5.2 🤝 Colaboración Detallada: Usuario vs GitHub Copilot
 
-### **📊 Distribución Global de Aportes**
+### **📊 Distribución global de aportes**
 
 | **Contribuyente** | **Porcentaje** | **Tipo de Aporte** |
 |-------------------|----------------|---------------------|
