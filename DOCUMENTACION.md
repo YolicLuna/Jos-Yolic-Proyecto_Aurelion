@@ -214,7 +214,7 @@ Realizar un **análisis estadístico descriptivo detallado** sobre los cuatro da
 
 ### **🎯 Desglose Detallado por Fase**
 
-| **Etapa del Análisis** | **Usuario** | **IA** | **Justificación** |
+| **Etapa del Análisis** | **Usuario** | **Inteligencia Artificial** | **Justificación** |
 |------------------------|-------------|--------|-------------------|
 | **🔍 Análisis Clientes** | **80%** | **20%** | Usuario definió enfoque completo; IA implementó cálculos |
 | **🛍️ Análisis Productos** | **70%** | **30%** | Usuario propuso qué calcular; IA agregó visualizaciones |
