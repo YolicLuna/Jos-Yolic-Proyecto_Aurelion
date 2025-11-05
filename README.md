@@ -9,6 +9,8 @@
 ![Seaborn](https://img.shields.io/badge/Seaborn-0.12+-purple?style=for-the-badge&logo=plotly)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Lab-orange?style=for-the-badge&logo=jupyter)
 ![Status](https://img.shields.io/badge/Status-Completado-success?style=for-the-badge)
+![GitHub Copilot](https://img.shields.io/badge/GitHub_Copilot-43%25-blue?style=for-the-badge&logo=github)
+![VSCode](https://img.shields.io/badge/VSCode-Integrated-blue?style=for-the-badge&logo=visual-studio-code)
 
 **Análisis Estadístico Descriptivo Completo de Datos Comerciales**  
 **🤖 Desarrollado integralmente con GitHub Copilot**
