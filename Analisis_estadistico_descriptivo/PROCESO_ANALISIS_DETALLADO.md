@@ -270,7 +270,7 @@ analisis_relacional = pd.merge(detalle_productos, ventas_clientes, on='id_venta'
 #### **7. Análisis de Distribución y Outliers**
 ```python
 ✅ Histogramas múltiples → Para cantidad, precio_unitario, importe
-✅ Boxplots categóricos → Importe por ciudad, categorías, mes de venta
+✅ Boxplots categóricos → Importe por ciudad
 ✅ Detección de outliers → Valores atípicos en distribuciones
 ```
 
@@ -310,7 +310,7 @@ analisis_relacional = pd.merge(detalle_productos, ventas_clientes, on='id_venta'
 **Decisión implementada:**
 ```python
 ✅ Histogramas + KDE → Mostrar distribución y concentración
-✅ Boxplots categóricos → Detectar outliers por grupos
+✅ Boxplots → Detectar outliers
 ✅ Gráficos con puntos → Recomendación profesional para series temporales
 ✅ Transparencia en scatter → Mejor visualización en datasets grandes
 ```
