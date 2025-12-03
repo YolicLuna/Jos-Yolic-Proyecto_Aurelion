@@ -7,14 +7,15 @@
 [![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-yellow.svg)](https://numpy.org/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-red.svg)](https://matplotlib.org/)
 [![Seaborn](https://img.shields.io/badge/Seaborn-Statistical%20Visualization-purple.svg)](https://seaborn.pydata.org/)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-orange.svg)](https://scikit-learn.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org/)
-[![Status](https://img.shields.io/badge/Status-Fase%202%20Completada-brightgreen.svg)]()
+[![Status](https://img.shields.io/badge/Status-Fase%203%20Completada-brightgreen.svg)]()
 
 ---
 
 ## 🎯 Descripción del Proyecto
 
-Este proyecto realiza un **análisis completo de datos de ventas y clientes** de una tienda, implementando técnicas de limpieza, normalización, y análisis estadístico descriptivo. Desarrollado como proyecto educativo para practicar análisis de datos con Python utilizando `pandas`, `numpy`, `matplotlib` y `seaborn`.
+Este proyecto realiza un **análisis completo de datos de ventas y clientes** de una tienda, implementando técnicas de limpieza, normalización, análisis estadístico predictivo y modelos de Machine Learning. Desarrollado como proyecto educativo para practicar análisis de datos con Python utilizando `pandas`, `numpy`, `matplotlib`, `seaborn` y `scikit-learn`.
 
 ### **Objetivos del Análisis**
 
@@ -49,13 +50,13 @@ JoséYolic-Proyecto_Aurelion/
 │   ├── Detalle_ventas.ipynb
 │   └── 📋 PROCESO_LIMPIEZA_DETALLADO.md     # Metodología de limpieza
 │
-└── 📁 Analisis_estadistico_descriptivo/      # Notebooks de análisis
-    ├── Clientes_Analisis.ipynb
-    ├── Productos_Analisis.ipynb
-    ├── Ventas_Analisis.ipynb
-    ├── Detalle_ventas_Analisis.ipynb
-    ├── Analisis_Relacional.ipynb             # ⭐ Vista 360° integrada
-    └── 📋 PROCESO_ANALISIS_DETALLADO.md      # Metodología de análisis
+├── 📁 Analisis_estadistico_descriptivo/      # Notebooks de análisis
+│   ├── Analisis_Relacional.ipynb             # ⭐ Vista 360° integrada
+│   └── 📋 PROCESO_ANALISIS_DETALLADO.md      # Metodología de análisis
+│
+└── 📁 IBM_Ml/                                 # Machine Learning
+    ├── aurelion_ml.ipynb                      # ⭐ Modelos K-Means y Regresión
+    └── 📋 IMPLEMENTACION_ML.md                # Metodología de ML
 ```
 
 ---
@@ -113,13 +114,25 @@ Análisis exhaustivo con estadísticas descriptivas y visualizaciones:
 
 > 📋 **Detalles completos:** Ver [`Analisis_estadistico_descriptivo/PROCESO_ANALISIS_DETALLADO.md`](Analisis_estadistico_descriptivo/PROCESO_ANALISIS_DETALLADO.md)
 
-### **🔄 Fase 3: Visualización Power BI** *(PENDIENTE)*
+### **✅ Fase 3: Implementación de Machine Learning** *(COMPLETADA)*
+
+Modelos de clustering y regresión sobre datos integrados:
+
+- 🤖 **K-Means Clustering** (segmentación de 64 clientes en 4 clusters)
+- 📈 **Regresión Lineal** (predicción de importes de ventas)
+- 📊 **4 visualizaciones ML** (dispersión, residuos, distribución errores, evaluación)
+- 🎯 **Estrategias personalizadas** por cluster de clientes
+- 📉 **Métricas de evaluación** (MAE, R², análisis de heterocedasticidad)
+
+> 📋 **Detalles completos:** Ver [`IBM_Ml/IMPLEMENTACION_ML.md`](IBM_Ml/IMPLEMENTACION_ML.md)
+
+### **🔄 Fase 4: Visualización Power BI** *(PENDIENTE)*
 
 Dashboards ejecutivos y visualizaciones interactivas.
 
-### **🔄 Fase 4: Machine Learning** *(PENDIENTE)*
+### **🔄 Fase 5: Optimización de Modelos ML** *(PENDIENTE)*
 
-Modelos predictivos y análisis avanzado.
+Modelos ensemble y feature engineering avanzado.
 
 ---
 
@@ -131,8 +144,8 @@ Este proyecto demuestra una **colaboración efectiva entre razonamiento humano y
 
 | Contribuyente | Porcentaje | Tipo de Aporte |
 |--------------|------------|----------------|
-| **👨‍🏫 Usuario (José Yolic)** | **57%** | Razonamiento estratégico, decisiones metodológicas, interpretación de negocio |
-| **🤖 GitHub Copilot** | **43%** | Implementación técnica, código, documentación, optimizaciones |
+| **👨‍🏫 Usuario (José Yolic)** | **57-60%** | Razonamiento estratégico, decisiones metodológicas, interpretación de negocio |
+| **🤖 GitHub Copilot** | **40-43%** | Implementación técnica, código, documentación, optimizaciones |
 
 ### **🎯 Valor de Cada Contribuyente**
 
@@ -174,7 +187,14 @@ jupyter notebook Limpieza_de_datos/
 jupyter notebook Analisis_estadistico_descriptivo/
 ```
 
-**⭐ Recomendación:** Comenzar con `Analisis_Relacional.ipynb` para una vista integrada 360° del negocio.
+**⭐ Machine Learning:**
+```bash
+jupyter notebook IBM_Ml/
+```
+
+**⭐ Recomendaciones:** 
+- Comenzar con `Analisis_Relacional.ipynb` para una vista integrada 360° del negocio
+- Explorar `aurelion_ml.ipynb` para ver modelos K-Means y Regresión Lineal
 
 ### **3️⃣ Programa Interactivo de Documentación**
 
@@ -187,10 +207,13 @@ Accede a un menú interactivo con:
 2. Origen de los datos
 3. Estructura y tipos de datos
 4. Proceso de limpieza detallado
-5. Proceso de análisis estadístico
-6. Escalas de medición
-7. Sugerencias y mejoras con Copilot
-8. Salir
+5. Proceso de análisis estadístico predictivo
+6. Implementación de Machine Learning
+7. Insights de negocio principales
+8. Pseudocódigo del programa
+9. Sugerencias y mejoras con Copilot
+10. Diagrama de flujo
+11. Salir
 
 ---
 
@@ -216,6 +239,12 @@ Accede a un menú interactivo con:
 - 📊 Correlaciones entre variables que emergen solo con datos integrados
 - 🔄 Patrones de comportamiento de clientes por categoría y ubicación
 
+### **🤖 Machine Learning**
+- 🎯 **4 clusters de clientes** con perfiles y estrategias diferenciadas
+- 👑 **Cluster VIP** identificado (16 clientes de alto gasto)
+- 📈 **Modelo predictivo baseline** para importes de ventas
+- ⚠️ **Áreas de mejora** identificadas (heterocedasticidad, feature engineering)
+
 ---
 
 ## 📈 Metodología Implementada
@@ -238,6 +267,15 @@ Accede a un menú interactivo con:
 5. 📋 INSIGHTS Y CONCLUSIONES    → Extracción de patrones
 ```
 
+### **🤖 Machine Learning (2 Modelos)**
+```
+1. 🎯 K-MEANS CLUSTERING         → Segmentación de 64 clientes en 4 grupos
+2. 📈 REGRESIÓN LINEAL           → Predicción de importes (baseline)
+3. 📊 VISUALIZACIONES ML         → 4 gráficos de evaluación
+4. 🔧 MÉTRICAS DE EVALUACIÓN     → MAE, R², análisis de residuos
+5. 💡 RECOMENDACIONES            → Mejoras y modelos avanzados
+```
+
 ---
 
 ## 🛠️ Tecnologías Utilizadas
@@ -247,6 +285,7 @@ Accede a un menú interactivo con:
 - **NumPy** - Operaciones numéricas
 - **Matplotlib** - Visualizaciones básicas
 - **Seaborn** - Visualizaciones estadísticas avanzadas
+- **Scikit-learn** - Machine Learning (K-Means, Regresión Lineal)
 - **Jupyter Notebook** - Entorno de desarrollo interactivo
 - **GitHub Copilot** - Asistente de IA para desarrollo
 
@@ -259,6 +298,7 @@ Para información detallada sobre cada fase del proyecto:
 - 📄 **[DOCUMENTACION.md](DOCUMENTACION.md)** - Documentación general completa
 - 🧹 **[PROCESO_LIMPIEZA_DETALLADO.md](Limpieza_de_datos/PROCESO_LIMPIEZA_DETALLADO.md)** - Metodología de limpieza paso a paso
 - 📊 **[PROCESO_ANALISIS_DETALLADO.md](Analisis_estadistico_descriptivo/PROCESO_ANALISIS_DETALLADO.md)** - Metodología de análisis estadístico
+- 🤖 **[IMPLEMENTACION_ML.md](IBM_Ml/IMPLEMENTACION_ML.md)** - Metodología de Machine Learning
 
 ---
 
@@ -273,6 +313,14 @@ Para información detallada sobre cada fase del proyecto:
 - 5 notebooks de análisis especializados
 - Tabla relacional integrada (22 columnas)
 - Visualizaciones profesionales (histogramas, boxplots, scatter plots, series temporales)
+- 11 visualizaciones de análisis estadístico
+- 4 visualizaciones de evaluación ML
+
+### **✅ Modelos de Machine Learning**
+- K-Means: 4 clusters con estrategias diferenciadas
+- Regresión Lineal: modelo baseline con métricas calculadas
+- Segmentación de 64 clientes completada
+- Identificación de clientes VIP
 
 ### **✅ Documentación**
 - Proceso metodológico completo documentado
@@ -288,14 +336,16 @@ Este proyecto demuestra un **enfoque profesional de Data Analysis**, combinando:
 - ✅ **Metodología estructurada** con criterios claros
 - ✅ **Técnicas estadísticas apropiadas** para cada tipo de variable
 - ✅ **Integración relacional completa** para insights multidimensionales
+- ✅ **Machine Learning implementado** con 2 modelos funcionales
 - ✅ **Colaboración efectiva** entre razonamiento humano y asistencia de IA
 - ✅ **Documentación exhaustiva** para reproducibilidad
 
 **🎯 Datos listos para:**
 - Dashboards ejecutivos y visualizaciones Power BI
-- Estrategias de marketing basadas en insights
+- Estrategias de marketing personalizadas por cluster
 - Optimización de portfolio de productos
-- Modelos predictivos y machine learning avanzado
+- Mejora de modelos predictivos (ensemble, feature engineering)
+- Toma de decisiones estratégicas basadas en datos
 
 ---
 
@@ -314,7 +364,7 @@ Proyecto educativo de análisis de datos
 
 ## 📅 Fecha
 
-**Octubre 2025**
+**Diciembre 2025**
 
 ---
 
