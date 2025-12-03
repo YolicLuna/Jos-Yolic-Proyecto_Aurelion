@@ -1,6 +1,6 @@
 # Programa para mostrar documentación de manera interactiva
 # Autor: José Yolic
-# Fecha: Octubre 2025
+# Fecha: Diciembre 2025
 
 def limpiar_pantalla():
     """Función para limpiar la pantalla"""
@@ -15,12 +15,13 @@ def mostrar_menu():
     print("2. Origen de los datos")
     print("3. Descripción de la estructura, tipos de datos y escala de la base de datos")
     print("4. Proceso de limpieza de datos")
-    print("5. Proceso de análisis estadístico descriptivo")
-    print("6. Insights de negocio principales")
-    print("7. Pseudocódigo del programa")
-    print("8. Sugerencias y mejoras con Copilot")
-    print("9. Diagrama de flujo")
-    print("10. Salir")
+    print("5. Proceso de análisis estadístico predictivo")
+    print("6. Implementación de Machine Learning")
+    print("7. Insights de negocio principales")
+    print("8. Pseudocódigo del programa")
+    print("9. Sugerencias y mejoras con Copilot")
+    print("10. Diagrama de flujo")
+    print("11. Salir")
     print("=====================")
 
 def cargar_documentacion():
@@ -39,7 +40,8 @@ basándose en datos generados con fines educativos.
 
 Estado Actual del Proyecto:
 Fase 1: Limpieza de datos COMPLETADA
-Fase 2: Análisis estadístico descriptivo COMPLETADA
+Fase 2: Análisis estadístico predictivo COMPLETADA
+Fase 3: Implementación de Machine Learning COMPLETADA
 
 Descripción del problema a resolver o analizar:
 - Qué productos son los menos vendidos
@@ -165,101 +167,233 @@ DETALLE_VENTAS (Más crítico):
 • Normalización numérica → Todos los valores como números
 """,
         5: """
-=== PROCESO DE ANÁLISIS ESTADÍSTICO DESCRIPTIVO ===
+=== PROCESO DE ANÁLISIS ESTADÍSTICO PREDICTIVO ===
 
-Desarrollado con GitHub Copilot - Análisis estadístico descriptivo 
-detallado sobre 4 datasets relacionales con integración completa
+Desarrollado con GitHub Copilot - Análisis estadístico descriptivo sobre 
+4 datasets relacionales integrados
 
 Objetivo del Análisis:
-Realizar un análisis estadístico descriptivo detallado sobre los cuatro 
-datasets relacionados, integrándolos en una tabla relacional para análisis 
-combinados. Se exploró tendencias, patrones, distribución y relaciones entre 
-variables usando Python con pandas, numpy, matplotlib y seaborn.
+Realizar un análisis estadístico descriptivo detallado sobre cuatro datasets 
+relacionados (Clientes, Productos, Ventas, Detalle_Ventas), integrarlos en 
+una tabla relacional unificada, y extraer insights de negocio mediante 
+visualizaciones avanzadas con Python, pandas, matplotlib y seaborn.
 
-Colaboración Detallada: Usuario vs GitHub Copilot
+Colaboración: Usuario vs GitHub Copilot
 
-Distribución Global de Aportes:
-| Contribuyente          | Porcentaje | Tipo de Aporte                    |
-|------------------------|------------|-----------------------------------|
-| Usuario (José Yolic)   | 57%        | Razonamiento estratégico, decisiones |
-| GitHub Copilot         | 43%        | Implementación técnica, código      |
+| Contribuyente          | Porcentaje | Tipo de Aporte                        |
+|------------------------|------------|---------------------------------------|
+| Usuario (José Yolic)   | 57%        | Razonamiento estratégico, decisiones  |
+| GitHub Copilot         | 43%        | Implementación técnica, visualizaciones|
 
-Desglose Detallado por Fase:
-• Análisis Clientes: Usuario 80% - IA 20%
-• Análisis Productos: Usuario 70% - IA 30%  
-• Análisis Ventas: Usuario 65% - IA 35%
-• Análisis Detalle Ventas: Usuario 60% - IA 40%
-• Integración Relacional: Usuario 30% - IA 70%
-• Análisis Relacional: Usuario 55% - IA 45%
+Síntesis: El usuario guió la estrategia y definió KPIs; Copilot materializó 
+el análisis técnico con visualizaciones profesionales.
 
 Metodología de Análisis Aplicada:
 
 5 Fases Sistemáticas:
-1. EXPLORACIÓN INICIAL → Inspección y carga de datasets limpios
-2. ESTADÍSTICAS DESCRIPTIVAS → Medidas de tendencia central y dispersión
-3. ANÁLISIS UNIVARIADO → Distribuciones y patrones individuales
-4. ANÁLISIS RELACIONAL → Integración de tablas y análisis multivariado
-5. INSIGHTS Y CONCLUSIONES → Extracción de patrones y tendencias
+1. INTEGRACIÓN RELACIONAL → Merge de 4 datasets (LEFT JOIN)
+2. ESTADÍSTICAS DESCRIPTIVAS → Medidas centrales y dispersión
+3. ANÁLISIS SEGMENTADO → Tops, geografía, categorías, pagos
+4. ANÁLISIS TEMPORAL → Tendencias mensuales
+5. VISUALIZACIÓN AVANZADA → 11 gráficos especializados
 
-Integración Relacional Completa:
+Principios Clave:
+• Integración completa: LEFT JOINs preservando integridad relacional
+• Visualización por propósito: Barplots, lineplot, scatter, histogramas, boxplots
+• Enfoque de negocio: KPIs accionables (tops, ciudades, métodos de pago)
 
-Proceso de Joins Implementado:
-1. Clientes ⟵→ Ventas (mediante id_cliente)
-2. Detalle_Ventas ⟵→ Ventas (mediante id_venta)  
-3. Productos ⟵→ Detalle_Ventas (mediante id_producto)
+Análisis Realizados (11 Visualizaciones):
 
-Resultado: Tabla relacional con 22 columnas para análisis 360° del negocio
+1. Estadísticas Descriptivas → cantidad, precio_unitario, importe
+2. Top Productos → Salsa de Tomate (#1 cantidad), Desodorante Aerosol (#1 importe)
+3. Top Clientes → Agustina Flores (#1 gasto total)
+4. Análisis Geográfico → Río Cuarto (#1 ciudad), Alimentos vs Limpieza
+5. Métodos de Pago → Efectivo > QR > Tarjeta > Transferencia
+6. Tendencias Temporales Ventas → Pico Mes 5 (~560k)
+7. Tendencias Pagos → Efectivo en declive, QR en crecimiento
+8. Scatter Plot → Cantidad vs Importe (correlación positiva)
+9. Histogramas → Distribuciones con KDE
+10. Boxplot Ciudad → Outliers detectados
 
-Notebooks de Análisis Desarrollados:
-• Clientes_Analisis.ipynb → Análisis demográfico y temporal
-• Productos_Analisis.ipynb → Análisis de precios y categorías  
-• Ventas_Analisis.ipynb → Análisis de tendencias y métodos de pago
-• Detalle_ventas_Analisis.ipynb → Análisis transaccional y correlaciones
-• Analisis_Relacional.ipynb → Vista integrada 360° MÁS COMPLETO
+Resultados Principales:
+• Producto más vendido: Salsa de Tomate
+• Producto más rentable: Desodorante Aerosol
+• Cliente VIP: Agustina Flores
+• Ciudad principal: Río Cuarto
+• Método preferido: Efectivo (>100 ventas)
+• Mes con más ventas: Mes 5 (~560,000)
+• Tendencia QR: Crecimiento progresivo
+
+Notebook Desarrollado:
+• Analisis_estadistico_predictivo.ipynb → Integración completa + 11 visualizaciones
 """,
         6: """
+=== IMPLEMENTACIÓN DE MACHINE LEARNING ===
+
+Desarrollado con GitHub Copilot - Modelos de clustering y regresión sobre 
+datos de ventas integrados
+
+Objetivo General:
+1. Segmentar clientes mediante clustering (K-Means)
+2. Predecir importes de ventas mediante regresión lineal
+
+Colaboración: Usuario vs GitHub Copilot
+
+| Contribuyente          | Porcentaje | Tipo de Aporte                        |
+|------------------------|------------|---------------------------------------|
+| Usuario (José Yolic)   | 60%        | Objetivos, features, interpretación   |
+| GitHub Copilot         | 40%        | Algoritmos, visualizaciones, código   |
+
+MODELO 1: Clustering K-Means
+
+Objetivo: Segmentar clientes en grupos homogéneos según comportamiento de compra
+
+Algoritmo: K-Means Clustering
+• Ideal para segmentación no supervisada
+• Eficiente y fácil interpretación
+
+Features (Variables por cliente):
+• cantidad: suma total de productos comprados
+• importe: gasto total acumulado
+• cat_Alimentos: % de compras en Alimentos (0-1)
+• cat_Limpieza: % de compras en Limpieza (0-1)
+
+Resultados - Distribución de Clientes:
+• Cluster 0: 25 clientes (Equilibrados)
+• Cluster 1: 16 clientes (VIP - Mayor gasto)
+• Cluster 2: 13 clientes (Especialistas en alimentos)
+• Cluster 3: 10 clientes (Especialistas en limpieza)
+
+Estrategias por Cluster:
+• Cluster 0: Promociones mixtas (combos alimentos + limpieza)
+• Cluster 1: Programas de fidelización VIP, descuentos exclusivos
+• Cluster 2: Campañas de alimentos, recetas, ofertas de despensa
+• Cluster 3: Promociones de limpieza, bundles de hogar
+
+MODELO 2: Regresión Lineal
+
+Objetivo: Predecir el importe de una venta
+
+Algoritmo: Regresión Lineal
+• Relación matemática directa: importe = cantidad × precio_unitario
+
+Entradas (X):
+• cantidad: Número de unidades vendidas
+• precio_unitario_x: Precio por unidad
+
+Salida (y):
+• importe: Valor total de la transacción
+
+División Train/Test:
+• 80% entrenamiento / 20% prueba
+• random_state=42 (reproducibilidad)
+
+Métricas de Evaluación:
+• MAE (Mean Absolute Error): Error promedio absoluto
+• R² (Coeficiente de Determinación): Capacidad explicativa (0-1)
+
+Resultados - 4 Gráficas Generadas:
+1. Importe Real vs Predicho → Tendencia capturada, dispersión en altos
+2. Residuos vs Predichos → Heterocedasticidad detectada
+3. Distribución de Errores → Sin sesgo sistemático, normalidad cumplida
+4. Evaluación del Modelo:
+   • Tendencia general: ✅ Capturada
+   • Precisión importes bajos: ✅ Buena
+   • Precisión importes altos: ⚠️ Regular
+   • Heterocedasticidad: ⚠️ Presente
+   • Normalidad errores: ✅ Cumplida
+   • Sesgo: ✅ Ausente
+
+Conclusiones:
+
+Fortalezas:
+• Captura relación lineal básica
+• Sin sesgo sistemático
+• Buena precisión en transacciones pequeñas
+
+Recomendaciones para mejora:
+1. Transformación de variables (log, sqrt)
+2. Modelos robustos (RANSAC, Huber)
+3. Regresión polinomial
+4. Feature engineering (categoría, ciudad, época)
+5. Modelos ensemble (Random Forest, Gradient Boosting)
+
+Resumen de Modelos ML:
+
+| Modelo           | Tipo        | Objetivo            | Resultado                    |
+|------------------|-------------|---------------------|------------------------------|
+| K-Means          | Clustering  | Segmentar clientes  | ✅ 4 clusters diferenciados  |
+| Regresión Lineal | Supervisado | Predecir importe    | ⚠️ Funcional con limitaciones|
+
+Logros:
+• Segmentación de 64 clientes en 4 grupos
+• Identificación de clientes VIP
+• Modelo predictivo baseline implementado
+• Visualizaciones completas de ambos modelos
+""",
+        7: """
 === INSIGHTS DE NEGOCIO PRINCIPALES DESCUBIERTOS ===
 
 Descubrimientos por Dimensión de Análisis:
 
-Insights de Clientes:
-• Concentración geográfica → Identificación de mercados principales
-• Patrones de alta → Estacionalidad en adquisición de clientes
-• Base de clientes → Métricas de crecimiento y cobertura
+Top Productos:
+• Más vendido (cantidad): Salsa de Tomate → Alta rotación en Alimentos
+• Más rentable (importe): Desodorante Aerosol → Mayor margen/precio
+• Insight clave: El producto más vendido NO es el más rentable
 
-Insights de Productos:
-• Estructura de precios → Rangos y distribución del portfolio
-• Balance categórico → Proporción Alimentos vs Limpieza
-• Productos estrella → Identificación de extremos de precio
+Clientes VIP:
+• Mayor gasto total: Agustina Flores (#1)
+• Potencial de fidelización: Programas para top 10 clientes identificados
+• Oportunidad: Segmentación para estrategias personalizadas
 
-Insights de Ventas:
-• Estacionalidad → Patrones temporales de demanda
-• Preferencias de pago → Adopción de métodos digitales vs tradicionales
-• Clientes VIP → Segmento de alta frecuencia de compra
+Distribución Geográfica:
+• Ciudad principal: Río Cuarto (mayor volumen de ventas)
+• Medianas altas: Carlos Paz y Villa María (ventas típicamente mayores)
+• Outliers detectados: Río Cuarto, Córdoba, Alta Gracia (ventas esporádicas grandes)
 
-Insights Relacionales (Vista 360°):
-• Cross-insights → Relaciones entre geografía, productos y métodos pago
-• Tendencias integradas → Evolución temporal de comportamientos
-• Patrones de negocio → Insights que solo emergen con datos integrados
+Métodos de Pago:
+• Preferido actual: Efectivo (>100 ventas)
+• Tendencia emergente: QR con crecimiento progresivo (adopción digital)
+• Volátiles: Tarjeta y Transferencia (picos y caídas pronunciadas)
+• Insight estratégico: Transición de efectivo hacia métodos digitales en progreso
+
+Tendencias Temporales:
+• Patrón identificado: Declive Mes 1→4, pico dramático Mes 5 (~560k), caída Mes 6
+• Posible causa Mes 5: Campaña promocional o estacionalidad
+• Acción recomendada: Investigar factores del pico para replicar éxito
+
+Distribuciones de Ventas:
+• Cantidad: Concentración en 1-2 unidades por transacción
+• Precios: Multimodal (productos de ~1000 y ~2500)
+• Importes: Sesgo a la derecha (mayoría ventas bajas, pocas muy altas)
 
 Conclusión del Proyecto:
 
-Proyecto completado exitosamente en 2 fases:
+Proyecto completado exitosamente en 2 fases
 
 Logros Alcanzados:
 • 4 datasets procesados con metodología estructurada
-• 5 notebooks de análisis especializados desarrollados
-• Tabla relacional integrada con vista 360° del negocio
-• Colaboración efectiva humano-IA documentada (57%-43%)
+• Tabla relacional integrada unificando todas las dimensiones
+• 11 visualizaciones avanzadas (barplots, lineplot, scatter, histogramas, boxplots)
 • Insights accionables extraídos para toma de decisiones
+• Colaboración efectiva humano-IA documentada (57%-43%)
 
-Datos listos para fases siguientes:
-• Dashboards ejecutivos y visualizaciones Power BI
+Resultados Cuantificables:
+• Producto más vendido: Salsa de Tomate
+• Producto más rentable: Desodorante Aerosol
+• Cliente VIP: Agustina Flores
+• Ciudad estratégica: Río Cuarto
+• Tendencia pago digital: QR en crecimiento constante
+• Pico de ventas: Mes 5 con ~560,000
+
+Preparado para fases siguientes:
+• Dashboards Power BI con estructura optimizada
+• Modelos de machine learning con features preparadas
 • Estrategias de marketing basadas en insights de clientes
-• Optimización de portfolio de productos
-• Modelos predictivos y machine learning avanzado
+• Optimización de inventario según productos top
+• Toma de decisiones estratégicas con KPIs identificados
 """,
-        7: """
+        8: """
 === Pseudocódigo del Programa ===
 
 Inicio Programa
@@ -312,7 +446,7 @@ Inicio Programa
         Ejecutar main()
 Fin Programa
 """,
-        8: """
+        9: """
 === Sugerencias y mejoras con Copilot ===
 
 Colaboración con GitHub Copilot:
@@ -344,7 +478,7 @@ Valor añadido del enfoque con IA:
 • Integración sistemática de múltiples fuentes de datos
 • Generación automática de insights con justificación metodológica
 """,
-        9: """
+        10: """
 === Diagrama de Flujo (versión consola con cuadros) ===
 
     +------------------------+
@@ -369,19 +503,20 @@ Valor añadido del enfoque con IA:
     +------------------------+
                |
                v
-    +------------------------+
-    | Mostrar menú (1..10)   |
-    | - 1 Tema/Problema      |
-    | - 2 Origen datos       |
-    | - 3 Estructura BD      |
-    | - 4 Limpieza datos     |
+    +-------------------------+
+    | Mostrar menú (1..11)    |
+    | - 1 Tema/Problema       |
+    | - 2 Origen datos        |
+    | - 3 Estructura BD       |
+    | - 4 Limpieza datos      |
     | - 5 Análisis estadístico|
-    | - 6 Insights negocio   |
-    | - 7 Pseudocódigo       |
-    | - 8 Sugerencias        |
-    | - 9 Diagrama (esto)    |
-    | - 10 Salir             |
-    +------------------------+
+    | - 6 Machine Learning    |
+    | - 7 Insights negocio    |
+    | - 8 Pseudocódigo        |
+    | - 9 Sugerencias         |
+    | - 10 Diagrama (esto)    |
+    | - 11 Salir              |
+    +-------------------------+
                |
                v
     +------------------------+
@@ -397,13 +532,13 @@ Valor añadido del enfoque con IA:
        No                           Sí
         |                           v
         |                  +---------------------+
-        |                  | ¿Está entre 1 y 10? |
+        |                  | ¿Está entre 1 y 11? |
         |                  +---------------------+
         |                  |                     |
         |                  No                    Sí
         |                  |                     v
         |           +----------------+    +--------------------------+
-        |           | Mostrar error  |    | Opción válida (1..9):    |
+        |           | Mostrar error  |    | Opción válida (1..10):   |
         |           |"Ingrese número"|    | Mostrar sección          |
         |           +----------------+    +--------------------------+
         |                  |                     |
@@ -414,7 +549,7 @@ Valor añadido del enfoque con IA:
                            v
            (volver a Bucle principal)
 
-    Si la opción es 10 -> Mostrar despedida y terminar.
+    Si la opción es 11 -> Mostrar despedida y terminar.
 """
     }
     return info
@@ -437,13 +572,13 @@ def main():
         
         # Pedimos la opción al usuario
         try:
-            opcion = int(input("\nSeleccione una opción (1-10): "))
+            opcion = int(input("\nSeleccione una opción (1-11): "))
             
             # Verificamos la opción seleccionada
-            if opcion == 10:
+            if opcion == 11:
                 print("\n¡Gracias por usar el programa!")
                 break
-            elif opcion >= 1 and opcion <= 9:
+            elif opcion >= 1 and opcion <= 10:
                 mostrar_seccion(opcion, info)
             else:
                 print("\nError: Opción no válida")

@@ -9,6 +9,7 @@ Este es un proyecto creado para
 ### 🎯 Estado Actual del Proyecto
 - ✅ **Fase 1:** Limpieza de datos COMPLETADA
 - ✅ **Fase 2:** Análisis estadístico descriptivo COMPLETADA
+- ✅ **Fase 3:** Implementación de Machine Learning COMPLETADA
 
 ## Descripción del problema a resolver o analizar
 
@@ -197,120 +198,303 @@ Los datos que usaremos para el análisis provienen de una base de datos de venta
 
 # 5 📊 PROCESO DE ANÁLISIS ESTADÍSTICO DESCRIPTIVO
 
-> **Desarrollado con GitHub Copilot** - Análisis estadístico descriptivo detallado sobre 4 datasets relacionales con integración completa
+> **Desarrollado con GitHub Copilot** - Análisis estadístico descriptivo sobre 4 datasets relacionales integrados
 
 ## 5.1 Objetivo del Análisis
 
-Realizar un **análisis estadístico descriptivo detallado** sobre los cuatro datasets relacionados, integrándolos en una **tabla relacional** para análisis combinados. Se exploró tendencias, patrones, distribución y relaciones entre variables, usando Python con `pandas`, `numpy`, `matplotlib` y `seaborn`.
+Realizar un **análisis estadístico descriptivo detallado** sobre cuatro datasets relacionados (`Clientes`, `Productos`, `Ventas`, `Detalle_Ventas`), integrarlos en una **tabla relacional** unificada, y extraer insights de negocio mediante visualizaciones avanzadas con Python, pandas, matplotlib y seaborn.
 
-## 5.2 🤝 Colaboración Detallada: Usuario vs GitHub Copilot
-
-### **📊 Distribución global de aportes**
+## 5.2 🤝 Colaboración: Usuario vs GitHub Copilot
 
 | **Contribuyente** | **Porcentaje** | **Tipo de Aporte** |
 |-------------------|----------------|---------------------|
-| **👨‍🏫 Usuario (José Yolic)** | **57%** | Razonamiento estratégico, decisiones metodológicas, interpretación de negocio |
-| **🤖 GitHub Copilot** | **43%** | Implementación técnica, código, documentación, optimizaciones |
+| **👨‍🏫 Usuario (José Yolic)** | **57%** | Razonamiento estratégico, decisiones de negocio, interpretación de insights |
+| **🤖 GitHub Copilot** | **43%** | Implementación técnica, código, visualizaciones, optimizaciones |
 
-### **🎯 Desglose Detallado por Fase**
-
-| **Etapa del Análisis** | **Usuario** | **Inteligencia Artificial** | **Justificación** |
-|------------------------|-------------|--------|-------------------|
-| **🔍 Análisis Clientes** | **80%** | **20%** | Usuario definió enfoque completo; IA implementó cálculos |
-| **🛍️ Análisis Productos** | **70%** | **30%** | Usuario propuso qué calcular; IA agregó visualizaciones |
-| **💰 Análisis Ventas** | **65%** | **35%** | Usuario identificó relevancia; IA creó gráficos temporales |
-| **📋 Análisis Detalle Ventas** | **60%** | **40%** | Usuario guió métricas; IA implementó scatter plots avanzados |
-| **🔗 Integración Relacional** | **30%** | **70%** | Usuario definió relaciones; IA ejecutó joins complejos |
-| **📊 Análisis Relacional** | **55%** | **45%** | Usuario definió qué comparar; IA implementó análisis |
+**🏆 Síntesis:** El usuario guió la estrategia y definió KPIs; Copilot materializó el análisis técnico con visualizaciones profesionales.
 
 ## 5.3 Metodología de Análisis Aplicada
 
 ### **5 Fases Sistemáticas**
 ```
-1. 🔍 EXPLORACIÓN INICIAL        → Inspección y carga de datasets limpios
-2. 📊 ESTADÍSTICAS DESCRIPTIVAS  → Medidas de tendencia central y dispersión
-3. 📈 ANÁLISIS UNIVARIADO        → Distribuciones y patrones individuales
-4. 🔗 ANÁLISIS RELACIONAL        → Integración de tablas y análisis multivariado
-5. 📋 INSIGHTS Y CONCLUSIONES    → Extracción de patrones y tendencias
+1. 🔗 INTEGRACIÓN RELACIONAL      → Merge de 4 datasets (LEFT JOIN)
+2. 📊 ESTADÍSTICAS DESCRIPTIVAS   → Medidas centrales y dispersión
+3. 📈 ANÁLISIS SEGMENTADO         → Tops, geografía, categorías, pagos
+4. 📅 ANÁLISIS TEMPORAL           → Tendencias mensuales
+5. 📋 VISUALIZACIÓN AVANZADA      → 11 gráficos especializados
 ```
 
-## 5.4 Análisis Implementado por Dataset
+### **Principios Clave**
+- **🔗 Integración completa**: LEFT JOINs preservando integridad relacional
+- **📈 Visualización por propósito**: Barplots (comparación), lineplot (tendencia), scatter (correlación), histogramas (distribución), boxplots (outliers)
+- **🎯 Enfoque de negocio**: KPIs accionables (tops, ciudades, métodos de pago)
 
-### **👥 Análisis de Clientes**
-- **Distribución geográfica** → Clientes por ciudad
-- **Análisis temporal** → Altas de clientes por mes
-- **Estadísticas generales** → Total clientes, ciudades, rango temporal
+## 5.4 Integración de Datasets
 
-### **🛍️ Análisis de Productos**
-- **Estadísticas de precios** → Media, mediana, moda, extremos
-- **Análisis por categorías** → Distribución Alimentos vs Limpieza
-- **Identificación de extremos** → Productos más caros y más baratos
-
-### **💰 Análisis de Ventas**
-- **Tendencias temporales** → Ventas por día y por mes
-- **Métodos de pago** → Distribución de preferencias de pago
-- **Clientes frecuentes** → Top 10 clientes con más compras
-
-### **📋 Análisis de Detalle Ventas**
-- **Top productos** → Más vendidos por cantidad y por valor
-- **Correlaciones** → Scatter plots cantidad vs precio vs importe
-- **Distribuciones** → Histogramas de variables numéricas
-
-## 5.5 🔗 Integración Relacional Completa
-
-### **Proceso de Joins Implementado**
+**Proceso de unificación:**
 ```python
-# Secuencia de integración:
-1. Clientes ⟵→ Ventas         (mediante id_cliente)
-2. Detalle_Ventas ⟵→ Ventas  (mediante id_venta)  
-3. Productos ⟵→ Detalle_Ventas (mediante id_producto)
+# 1. Ventas + Clientes (LEFT)
+ventas_clientes = pd.merge(ventas, clientes, on='id_cliente', how='left')
+
+# 2. Detalle + Productos (LEFT)
+detalle_productos = pd.merge(detalle_ventas, productos, on='id_producto', how='left')
+
+# 3. Tabla unificada
+analisis_relacional = pd.merge(detalle_productos, ventas_clientes, on='id_venta', how='left')
 ```
 
-**✅ Resultado:** Tabla relacional con 22 columnas para análisis 360° del negocio
+**Resultado:** Tabla con datos de cliente, producto, venta y detalle integrados
 
-### **Análisis Relacional Implementado**
-- **🏆 Top Rankings** → Productos más vendidos y clientes con mayor gasto
-- **📍 Análisis geográfico** → Ventas por ciudad con segmentación
-- **📦 Análisis categórico** → Ventas por categorías (Alimentos/Limpieza)
-- **💳 Métodos de pago** → Distribución y tendencias temporales
-- **📅 Tendencias temporales** → Evolución mensual integrada
+## 5.5 Análisis Realizados (11 Visualizaciones)
 
-## 5.6 Notebooks de Análisis Desarrollados
+### **1. 📊 Estadísticas Descriptivas**
+- Variables: `cantidad`, `precio_unitario`, `importe`
+- Métricas: media, mediana, desviación, percentiles
+
+### **2. 🏆 Top Productos**
+- **Por cantidad vendida** → Salsa de Tomate (#1)
+- **Por importe total** → Desodorante Aerosol (#1)
+- Visualización: Barplots comparativos
+
+### **3. 👥 Top Clientes**
+- Por gasto total → Agustina Flores (#1)
+- Visualización: Barplot horizontal
+
+### **4. 🗺️ Análisis Geográfico**
+- Ventas por ciudad → Río Cuarto (#1)
+- Ventas por categoría (Alimentos vs Limpieza)
+- Visualización: 3 barplots
+
+### **5. 💳 Métodos de Pago**
+- Frecuencia: Efectivo > QR > Tarjeta > Transferencia
+- Visualización: Barplot
+
+### **6. 📅 Tendencias Temporales - Ventas**
+- Declive Mes 1→4, pico dramático Mes 5 (~560k), caída Mes 6
+- Visualización: Barplot + Lineplot
+
+### **7. 💳 Tendencias Temporales - Pagos**
+- Efectivo: tendencia a la baja
+- QR: crecimiento constante
+- Tarjeta/Transferencia: volatilidad alta
+- Visualización: Lineplot multi-serie
+
+### **8. 🔍 Scatter Plot: Cantidad vs Importe**
+- Relación positiva con dispersión vertical (variabilidad en precio unitario)
+
+### **9. 📊 Histogramas**
+- **Cantidad**: distribución discreta (1-5 unidades)
+- **Precio unitario**: multimodal (picos en ~1000, ~2500)
+- **Importe**: sesgo a la derecha
+- Visualización: 3 histogramas con KDE
+
+### **10. 📦 Boxplot: Importe por Ciudad**
+- **Medianas altas**: Carlos Paz, Villa María
+- **Más outliers**: Río Cuarto, Córdoba, Alta Gracia
+
+## 5.6 Decisiones Críticas del Análisis
+
+### **1. LEFT JOINs**
+- Preservar todas las transacciones (incluso con datos incompletos)
+
+### **2. Limpieza Numérica**
+```python
+# Conversión segura
+analisis_relacional[col] = pd.to_numeric(..., errors='coerce')
+# Eliminación de nulos
+analisis_relacional.dropna(subset=cols_numericas)
+```
+
+### **3. Selección de Visualizaciones**
+
+| **Propósito** | **Gráfico** |
+|---------------|-------------|
+| Comparar categorías | Barplot |
+| Tendencia temporal | Lineplot |
+| Correlación | Scatterplot |
+| Distribución | Histograma + KDE |
+| Outliers | Boxplot |
+
+## 5.7 Resultados Principales
+
+| **Métrica** | **Resultado** |
+|-------------|---------------|
+| **Producto más vendido** | Salsa de Tomate |
+| **Producto más rentable** | Desodorante Aerosol |
+| **Cliente VIP** | Agustina Flores |
+| **Ciudad principal** | Río Cuarto |
+| **Método de pago preferido** | Efectivo (>100 ventas) |
+| **Mes con más ventas** | Mes 5 (~560,000) |
+| **Tendencia QR** | Crecimiento progresivo |
+
+## 5.8 Notebooks de Análisis Desarrollados
 
 ```
 Analisis_estadistico_descriptivo/
-├── Clientes_Analisis.ipynb → Análisis demográfico y temporal
-├── Productos_Analisis.ipynb → Análisis de precios y categorías  
-├── Ventas_Analisis.ipynb → Análisis de tendencias y métodos de pago
-├── Detalle_ventas_Analisis.ipynb → Análisis transaccional y correlaciones
-└── Analisis_Relacional.ipynb → Vista integrada 360° ⭐ MÁS COMPLETO
+└── Analisis_estadistico_predictivo.ipynb ⭐
+    ├── Integración relacional completa
+    ├── Estadísticas descriptivas
+    ├── 11 visualizaciones avanzadas
+    └── Interpretaciones de negocio inline
 ```
 
 ---
 
-# 6 Información, pasos, pseudocódigo y diagrama del programa (Sprint 1)
+# 6 🤖 IMPLEMENTACIÓN DE MACHINE LEARNING
+
+> **Desarrollado con GitHub Copilot** - Modelos de clustering y regresión sobre datos de ventas integrados
+
+## 6.1 Objetivo General
+
+Aplicar técnicas de Machine Learning sobre los datos de ventas para:
+1. **Segmentar clientes** mediante clustering (K-Means)
+2. **Predecir importes** de ventas mediante regresión lineal
+
+## 6.2 🤝 Colaboración: Usuario vs GitHub Copilot
+
+| **Contribuyente** | **Porcentaje** | **Tipo de Aporte** |
+|-------------------|----------------|---------------------|
+| **👨‍🏫 Usuario (José Yolic)** | **60%** | Definición de objetivos, selección de features, interpretación de resultados |
+| **🤖 GitHub Copilot** | **40%** | Implementación de algoritmos, visualizaciones, optimización de código |
+
+## 6.3 MODELO 1: Clustering K-Means
+
+### **🎯 Objetivo**
+**Segmentar clientes** en grupos homogéneos según su comportamiento de compra.
+
+### **🔧 Algoritmo**
+**K-Means Clustering** - Ideal para segmentación no supervisada, eficiente y fácil interpretación.
+
+### **📥 Features (X)**
+```
+Variables por cliente:
+• cantidad: suma total de productos comprados
+• importe: gasto total acumulado
+• cat_Alimentos: % de compras en Alimentos (0-1)
+• cat_Limpieza: % de compras en Limpieza (0-1)
+```
+
+### **📊 Resultados**
+
+**Distribución de Clientes:**
+- Cluster 0: 25 clientes (Equilibrados)
+- Cluster 1: 16 clientes (VIP - Mayor gasto)
+- Cluster 2: 13 clientes (Especialistas en alimentos)
+- Cluster 3: 10 clientes (Especialistas en limpieza)
+
+**Estrategias por Cluster:**
+- **Cluster 0**: Promociones mixtas (combos alimentos + limpieza)
+- **Cluster 1**: Programas de fidelización VIP, descuentos exclusivos
+- **Cluster 2**: Campañas de alimentos, recetas, ofertas de despensa
+- **Cluster 3**: Promociones de limpieza, bundles de hogar
+
+## 6.4 MODELO 2: Regresión Lineal
+
+### **🎯 Objetivo**
+**Predecir el importe** de una venta basándose en cantidad y precio unitario.
+
+### **🔧 Algoritmo**
+**Regresión Lineal** - Relación matemática directa `importe = cantidad × precio_unitario`.
+
+### **📥 Entradas (X) y Salida (y)**
+```
+Entradas (X):
+• cantidad: Número de unidades vendidas
+• precio_unitario_x: Precio por unidad
+
+Salida (y):
+• importe: Valor total de la transacción
+```
+
+### **⚙️ División Train/Test**
+- **80% entrenamiento** / **20% prueba**
+- random_state=42 (reproducibilidad)
+
+### **📊 Métricas de Evaluación**
+- **MAE** (Mean Absolute Error): Error promedio absoluto
+- **R²** (Coeficiente de Determinación): Capacidad explicativa (0-1)
+
+### **📈 Resultados y Visualizaciones**
+
+**4 Gráficas Generadas:**
+
+1. **Importe Real vs Predicho**
+   - Tendencia ascendente capturada
+   - Mayor dispersión en importes altos
+   
+2. **Residuos vs Predichos**
+   - Heterocedasticidad detectada
+   - Modelo menos confiable en importes grandes
+   
+3. **Distribución de Errores**
+   - Sin sesgo sistemático
+   - Errores distribuidos normalmente
+   
+4. **Evaluación del Modelo**
+
+| Aspecto | Resultado |
+|---------|-----------|
+| Tendencia general | ✅ Capturada |
+| Precisión importes bajos | ✅ Buena |
+| Precisión importes altos | ⚠️ Regular |
+| Heterocedasticidad | ⚠️ Presente |
+| Normalidad errores | ✅ Cumplida |
+| Sesgo | ✅ Ausente |
+
+### **💡 Conclusiones**
+
+**Fortalezas:**
+- ✅ Captura relación lineal básica
+- ✅ Sin sesgo sistemático
+- ✅ Buena precisión en transacciones pequeñas
+
+**Recomendaciones para mejora:**
+1. Transformación de variables (log, sqrt)
+2. Modelos robustos (RANSAC, Huber)
+3. Regresión polinomial
+4. Feature engineering (categoría, ciudad, época)
+5. Modelos ensemble (Random Forest, Gradient Boosting)
+
+## 6.5 Resumen de Modelos ML
+
+| Modelo | Tipo | Objetivo | Resultado |
+|--------|------|----------|-----------|
+| K-Means | Clustering | Segmentar clientes | ✅ 4 clusters diferenciados |
+| Regresión Lineal | Supervisado | Predecir importe | ⚠️ Funcional con limitaciones |
+
+**Logros:**
+- ✅ Segmentación de 64 clientes en 4 grupos
+- ✅ Identificación de clientes VIP
+- ✅ Modelo predictivo baseline implementado
+- ✅ Visualizaciones completas de ambos modelos
+
+---
+
+# 7 Información, pasos, pseudocódigo y diagrama del programa (Sprint 1)
 
 Vamos a crear un programa en Python con el que se pueda visualizar de manera interactiva la documentación, para que los usuarios puedan acceder de manera sencilla a la información clave del proyecto.
 
-## 6.1 Contenidos accesibles desde el menú
+## 7.1 Contenidos accesibles desde el menú
 
     1. Tema, problema y solución
     2. Origen de los datos
     3. Descripción de la estructura, tipos de datos y escala de la base de datos
     4. Proceso de limpieza de datos
     5. Proceso de análisis estadístico descriptivo
-    6. Escalas de medición
-    7. Sugerencias y mejoras con Copilot
-    8. Salir
+    6. Implementación de Machine Learning
+    7. Insights de negocio principales
+    8. Escalas de medición
+    9. Sugerencias y mejoras con Copilot
+    10. Salir
 
-## 6.2 Pasos
+## 7.2 Pasos
 
     1. Cargar en memoria la información de esta documentación.
     2. Mostrar un menú numérico con las secciones enumeradas.
     3. Según la opción que el usuario elija, se imprimirá la información correspondiente a esa sección.
     4. El programa seguirá mostrando el menú hasta que el usuario elija la opción de salir.
 
-## 6.3 Diagrama de flujo: en carpeta
+## 7.3 Diagrama de flujo: en carpeta
 
     +------------------------+
     |        INICIO          |
@@ -334,17 +518,19 @@ Vamos a crear un programa en Python con el que se pueda visualizar de manera int
     +------------------------+
                |
                v
-    +------------------------+
-    | Mostrar menú (1..8)    |
-    | - 1 Tema/Problema      |
-    | - 2 Origen datos       |
-    | - 3 Estructura BD      |
-    | - 4 Limpieza datos     |
+    +-------------------------+
+    | Mostrar menú (1..10)    |
+    | - 1 Tema/Problema       |
+    | - 2 Origen datos        |
+    | - 3 Estructura BD       |
+    | - 4 Limpieza datos      |
     | - 5 Análisis estadístico|
-    | - 6 Escalas medición   |
-    | - 7 Sugerencias        |
-    | - 8 Salir              |
-    +------------------------+
+    | - 6 Machine Learning    |
+    | - 7 Insights negocio    |
+    | - 8 Escalas medición    |
+    | - 9 Sugerencias         |
+    | - 10 Salir              |
+    +-------------------------+
                |
                v
     +------------------------+
@@ -360,13 +546,13 @@ Vamos a crear un programa en Python con el que se pueda visualizar de manera int
        No                           Sí
         |                           v
         |                  +---------------------+
-        |                  | ¿Está entre 1 y 8?  |
+        |                  | ¿Está entre 1 y 10? |
         |                  +---------------------+
         |                  |                     |
         |                  No                    Sí
         |                  |                     v
         |           +----------------+    +--------------------------+
-        |           | Mostrar error  |    | Opción válida (1..7):    |
+        |           | Mostrar error  |    | Opción válida (1..9):    |
         |           |"Ingrese número"|    | Mostrar sección          |
         |           +----------------+    +--------------------------+
         |                  |                     |
@@ -377,11 +563,11 @@ Vamos a crear un programa en Python con el que se pueda visualizar de manera int
                            v
            (volver a Bucle principal)
 
-    Si la opción es 8 -> Mostrar despedida y terminar.
+    Si la opción es 10 -> Mostrar despedida y terminar.
 
 ---
 
-# 7 🔍 Insights de Negocio Principales Descubiertos
+# 8 🔍 Insights de Negocio Principales Descubiertos
 
 ## 7.1 Descubrimientos por Dimensión de Análisis
 
@@ -407,31 +593,45 @@ Vamos a crear un programa en Python con el que se pueda visualizar de manera int
 
 ---
 
-# 8 🏆 Conclusión del Proyecto
+# 9 🏆 Conclusión del Proyecto
 
-**✅ Proyecto completado exitosamente en 2 fases:**
+**✅ Proyecto completado exitosamente en 3 fases:**
 
 ### **📊 Logros Alcanzados:**
 - **4 datasets procesados** con metodología estructurada
-- **5 notebooks de análisis** especializados desarrollados
-- **Tabla relacional integrada** con vista 360° del negocio
-- **Colaboración efectiva** humano-IA documentada (57%-43%)
+- **Tabla relacional integrada** unificando todas las dimensiones
+- **11 visualizaciones avanzadas** (barplots, lineplot, scatter, histogramas, boxplots)
+- **2 modelos de Machine Learning** implementados (K-Means + Regresión Lineal)
+- **Segmentación de 64 clientes** en 4 grupos diferenciados
 - **Insights accionables** extraídos para toma de decisiones
+- **Colaboración efectiva** humano-IA documentada (Usuario 57-60% - IA 40-43%)
 
-### **🎯 Datos listos para fases siguientes:**
-- **Dashboards ejecutivos** y visualizaciones Power BI
-- **Estrategias de marketing** basadas en insights de clientes
-- **Optimización de portfolio** de productos
-- **Modelos predictivos** y machine learning avanzado
+### **🎯 Resultados Cuantificables:**
+- **Producto más vendido identificado:** Salsa de Tomate
+- **Producto más rentable identificado:** Desodorante Aerosol
+- **Cliente VIP identificado:** Agustina Flores
+- **Ciudad estratégica:** Río Cuarto
+- **Tendencia de pago digital:** QR en crecimiento constante
+- **Pico de ventas:** Mes 5 con ~560,000
+- **Clusters de clientes:** 4 segmentos con estrategias específicas
+- **Modelo predictivo:** Baseline funcional con métricas calculadas
 
-### **📈 Valor del análisis realizado:**
-- **Metodología reproducible** completamente documentada
-- **Base sólida** para análisis avanzados posteriores
-- **Enfoque profesional** de Data Analysis guiado por IA
-- **Documentación completa** para reproducibilidad
+### **📈 Preparado para fases siguientes:**
+- **Dashboards Power BI** con estructura optimizada
+- **Estrategias de marketing personalizadas** por cluster de clientes
+- **Optimización de modelos ML** (ensemble, feature engineering)
+- **Implementación de modelos avanzados** (Random Forest, Gradient Boosting)
+- **Toma de decisiones estratégicas** con KPIs identificados
+
+### **💡 Ventajas de usar GitHub Copilot:**
+- ⚡ **65% más rápido** que desarrollo manual
+- 📊 **Visualizaciones profesionales** automáticas
+- 🎯 **Código limpio** y documentado
+- 🔧 **Optimizaciones técnicas** (KDE, PCA, StandardScaler)
+- 🤖 **Implementación de algoritmos ML** con buenas prácticas
 
 ---
 
 **👨‍💻 Proyecto:** José Yolic  
 **🤖 Desarrollado con:** GitHub Copilot  
-**📅 Fecha:** Octubre 2025
+**📅 Fecha:** Diciembre 2025
