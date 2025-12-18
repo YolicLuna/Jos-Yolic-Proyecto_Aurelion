@@ -1,4 +1,5 @@
-# 📊 Análisis de Ventas y Clientes - Proyecto Aurelion
+# 📊 Proyecto Aurelion. 
+### (Curso Fundamentos de Inteligencia Artificial de IBM y Guayerd)
 
 > **Proyecto educativo de análisis de datos desarrollado con GitHub Copilot**
 
@@ -313,11 +314,35 @@ Accede a un menú interactivo con:
 5. 💡 RECOMENDACIONES            → Mejoras y modelos avanzados
 ```
 
+### **📊 Business Intelligence – Power BI**
+### 🧩 Preparación y Modelado en Power BI (5 Fases)
+```
+1. 📂 CARGA DE DATOS             → Importación de 4 archivos CSV en Power BI
+2. 🧹 TRANSFORMACIÓN (Power Query) → Limpieza, eliminación de columnas y ajuste de tipos
+3. 🧮 COLUMNAS DERIVADAS         → Creación de campos calculados (mes, año, periodos)
+4. 🧱 MODELO DE DATOS            → Definición de relaciones y cardinalidades
+5. 📅 TABLA DE CALENDARIO        → Soporte para análisis temporal y jerarquías
+```
+### 🧮 Cálculo de Métricas y KPIs (DAX)
+```
+1. 📊 MEDIDAS PRINCIPALES        → Ventas totales, número de ventas, ticket promedio
+2. 📈 MÉTRICAS TEMPORALES        → Ventas mensuales, mes anterior, último mes
+3. 🔄 CRECIMIENTO (%)            → Comparaciones temporales dinámicas
+4. ⚠️ VALORES EXTREMOS           → Venta máxima y mínima
+5. 🎯 MÉTRICAS POR CONTEXTO      → Cálculos sensibles a filtros y segmentadores
+```
+### 📈 Visualización e Interactividad
+```
+1. 📊 DISEÑO DE KPIs             → Indicadores ejecutivos en vista general
+2. 📉 ANÁLISIS TEMPORAL          → Evolución mensual con jerarquías
+3. 🏙️ SEGMENTACIÓN GEOGRÁFICA    → Análisis por ciudad y mapa
+4. 💳 SEGMENTADORES              → Medio de pago, frecuencia de clientes, categorías
+5. 🔁 INTERACCIÓN CRUZADA        → Actualización dinámica de visuales al seleccionar datos
+```
+
 ---
 
-## 🛠️ Tecnologías Utilizadas
-
-- **Python 3.8+** - Lenguaje principal
+### 🛠️ Tecnologías Utilizadas- **Python 3.8+** - Lenguaje principal
 - **Pandas** - Manipulación y análisis de datos
 - **NumPy** - Operaciones numéricas
 - **Matplotlib** - Visualizaciones básicas
@@ -325,6 +350,10 @@ Accede a un menú interactivo con:
 - **Scikit-learn** - Machine Learning (K-Means, Regresión Lineal)
 - **Jupyter Notebook** - Entorno de desarrollo interactivo
 - **GitHub Copilot** - Asistente de IA para desarrollo
+- **Power BI Desktop** - Creación de dashboards interactivos, modelado de datos, medidas DAX y visualización de KPIs
+- **Visual Studio Code** - Editor de código para desarrollo en Python, análisis de datos y control de versiones con Git
+- **Git** – Control de versiones para gestión y seguimiento de cambios en proyectos
+- **GitHub** – Repositorios remotos, documentación de proyectos y portafolio de código
 
 ---
 
@@ -401,14 +430,6 @@ Este proyecto demuestra un **enfoque profesional de Data Analysis**, combinando:
 
 **José Yolic**  
 Proyecto educativo de análisis de datos
-
----
-
-## 🤖 Desarrollado Con
-
-**GitHub Copilot** - Asistente de IA para implementación técnica, optimizaciones y documentación  
-**Power BI Desktop** - Dashboards ejecutivos e interactivos  
-**Python** - Análisis de datos y Machine Learning (pandas, scikit-learn, matplotlib, seaborn)
 
 ---
 
