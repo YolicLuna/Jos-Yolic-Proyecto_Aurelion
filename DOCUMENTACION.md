@@ -10,6 +10,7 @@ Este es un proyecto creado para
 - ✅ **Fase 1:** Limpieza de datos COMPLETADA
 - ✅ **Fase 2:** Análisis estadístico descriptivo COMPLETADA
 - ✅ **Fase 3:** Implementación de Machine Learning COMPLETADA
+- ✅ **Fase 4:** Dashboard Power BI COMPLETADA
 
 ## Descripción del problema a resolver o analizar
 
@@ -29,7 +30,7 @@ De igual forma, se podría analizar a los clientes para identificar:
 - **Vista integral** del negocio con todas las dimensiones integradas
 - **Insights accionables** extraídos de 4 datasets relacionales  
 - **Metodología reproducible** documentada completamente
-- **Colaboración efectiva** humano-IA (Usuario 57% - IA 43%)
+- **Colaboración efectiva** humano-IA (Usuario 71% - IA 29%)
 
 ---
 
@@ -208,8 +209,8 @@ Realizar un **análisis estadístico descriptivo detallado** sobre cuatro datase
 
 | **Contribuyente** | **Porcentaje** | **Tipo de Aporte** |
 |-------------------|----------------|---------------------|
-| **👨‍🏫 Usuario (José Yolic)** | **57%** | Razonamiento estratégico, decisiones de negocio, interpretación de insights |
-| **🤖 GitHub Copilot** | **43%** | Implementación técnica, código, visualizaciones, optimizaciones |
+| **👨‍🏫 Usuario (José Yolic)** | **71%** | Razonamiento estratégico, decisiones de negocio, interpretación de insights, diseño Power BI |
+| **🤖 GitHub Copilot** | **29%** | Implementación técnica, código, visualizaciones, optimizaciones (Fases 1-3) |
 
 **🏆 Síntesis:** El usuario guió la estrategia y definió KPIs; Copilot materializó el análisis técnico con visualizaciones profesionales.
 
@@ -354,8 +355,8 @@ Aplicar técnicas de Machine Learning sobre los datos de ventas para:
 
 | **Contribuyente** | **Porcentaje** | **Tipo de Aporte** |
 |-------------------|----------------|---------------------|
-| **👨‍🏫 Usuario (José Yolic)** | **60%** | Definición de objetivos, selección de features, interpretación de resultados |
-| **🤖 GitHub Copilot** | **40%** | Implementación de algoritmos, visualizaciones, optimización de código |
+| **👨‍🏫 Usuario (José Yolic)** | **72%** | Definición de objetivos, selección de features, interpretación de resultados, ML y Power BI |
+| **🤖 GitHub Copilot** | **28%** | Implementación de algoritmos, visualizaciones, optimización de código (Fases 1-3) |
 
 ## 6.3 MODELO 1: Clustering K-Means
 
@@ -470,11 +471,174 @@ Salida (y):
 
 ---
 
-# 7 Información, pasos, pseudocódigo y diagrama del programa (Sprint 1)
+# 7 📊 DASHBOARD POWER BI
+
+> **Desarrollado con Power BI Desktop** - Dashboard interactivo para análisis de ventas y desempeño comercial
+
+## 7.1 Objetivo General
+
+Crear un **dashboard interactivo en Power BI** que proporcione una visión clara y estructurada del desempeño comercial de Aurelion, permitiendo análisis temporal, segmentación por clientes, productos, medios de pago y ubicación geográfica para apoyar la toma de decisiones estratégicas.
+
+## 7.2 Descripción General del Dashboard
+
+El dashboard fue desarrollado siguiendo principios de:
+- 🧱 **Modelado de datos relacional** con tablas conectadas correctamente
+- 🧮 **Medidas DAX** para cálculos dinámicos y sensibles al contexto
+- 📈 **KPIs ejecutivos** que brindan visión inmediata del negocio
+- 🎨 **Visualización efectiva** priorizando claridad y coherencia
+- 🔄 **Interactividad completa** con segmentadores vinculados
+
+## 7.3 Fuentes de Datos y Preparación
+
+### **📥 Datos Utilizados**
+Los datos provienen de los **4 archivos CSV** procesados en fases anteriores:
+- `Clientes_limpio.csv`
+- `Productos_limpio.csv`
+- `Ventas_limpio.csv`
+- `Detalle_ventas_limpio.csv`
+
+### **🔄 Transformación de Datos en Power BI**
+- ✅ Carga de archivos CSV
+- ✅ Eliminación de columnas redundantes
+- ✅ Corrección de tipos y formatos de datos
+- ✅ Creación de columnas derivadas (mes, año, etc.)
+- ✅ Unificación y estructuración para análisis
+
+## 7.4 Modelo de Datos
+
+### **🔗 Estructura Relacional**
+El modelo implementa un enfoque relacional que conecta:
+- **Tabla de Ventas** (centro) ← Cliente, Producto, Detalle
+- **Tabla de Clientes** (dimensión)
+- **Tabla de Productos** (dimensión)
+- **Tabla de Detalle Ventas** (hechos desglosados)
+- **Tabla de Calendario** (dimensión temporal para análisis dinámico)
+
+**Beneficios:**
+- ✅ Aseguran cálculos correctos al aplicar filtros
+- ✅ Evitan inconsistencias en resultados
+- ✅ Permiten análisis a múltiples niveles
+
+## 7.5 Medidas y Cálculos DAX
+
+Se implementaron **medidas DAX** priorizando cálculos dinámicos sobre columnas calculadas:
+
+### **KPI Principales**
+- 📊 **Ventas Totales** - Suma de importes de todas las ventas
+- 📈 **Número de Ventas** - Conteo de transacciones
+- 💰 **Ticket Promedio** - Importe promedio por venta
+- 🎯 **Venta Máxima/Mínima** - Extremos de transacciones
+- 📅 **Ventas Mensuales** - Desglose temporal
+- 📊 **Crecimiento Mensual (%)** - Variación mes a mes
+
+### **Medidas de Clientes**
+- 👥 **Clientes Activos** - Número de clientes con compras
+- 👑 **Clientes Top** - Clientes de mayor gasto
+- 💵 **Promedio por Cliente** - Gasto promedio individual
+
+### **Ventaja del Enfoque**
+Las medidas se recalculan automáticamente según el contexto de filtros aplicados, permitiendo análisis dinámico y preciso.
+
+## 7.6 Jerarquías Temporales
+
+Se implementó una **tabla de calendario dedicada** con jerarquías que incluyen:
+- 📅 **Año** → Trimestre → Mes
+- 🔢 **Orden correcto de meses** para evitar inconsistencias visuales
+- 📊 **Columnas auxiliares** para análisis temporal avanzado
+
+## 7.7 KPIs Principales del Dashboard
+
+### **📌 Visión Ejecutiva**
+En la parte superior se presentan los KPIs clave:
+
+| KPI | Descripción | Importancia |
+|-----|-------------|-------------|
+| **Ventas Totales** | Suma de importes | ⭐⭐⭐ Principal |
+| **Número de Ventas** | Conteo de transacciones | ⭐⭐ Complementaria |
+| **Ticket Promedio** | Importe promedio | ⭐⭐ Complementaria |
+
+**Interpretación:** Ventas Totales es el KPI principal, pero se complementa con número de ventas y ticket promedio para entender si el desempeño se debe a volumen o valor por transacción.
+
+## 7.8 Análisis y Segmentaciones Implementadas
+
+### **📊 Evolución Temporal**
+- 📈 Gráfico de **evolución mensual** de ventas
+- 🔍 Identificación de **tendencias, caídas y recuperaciones**
+- 📌 Detección de **comportamiento estacional**
+
+### **🏙️ Análisis Geográfico**
+- 🗺️ **Segmentación por ciudad** con gráficos y mapa geográfico
+- 📍 Identificación de **concentración de ventas** por localidad
+- 🎯 Comparación de **desempeño entre ciudades**
+
+### **💳 Medio de Pago**
+- 💰 **Porcentaje de ventas** por método de pago
+- 📊 Análisis de **preferencias de clientes**
+- 📈 Identificación de **tendencias (digital vs tradicional)**
+
+### **👥 Análisis de Clientes**
+- 🏆 **Ranking de clientes principales**
+- 📊 **Segmentación por frecuencia** (frecuente, esporádico, ocasional)
+- 👑 Identificación de **clientes activos y top**
+
+### **📦 Productos y Categorías**
+- 🛍️ **Análisis de ventas** por categoría
+- 📊 **Participación en ventas** por producto
+- 🎯 Identificación de **categorías principales**
+
+## 7.9 Comportamiento Interactivo
+
+El dashboard fue diseñado como herramienta **totalmente interactiva**:
+
+### **🔄 Actualización Dinámica**
+- ✅ Seleccionar ciudad → Actualiza KPIs, gráficos, pagos y clientes
+- ✅ Seleccionar categoría de cliente → Filtra resultados automáticamente
+- ✅ Seleccionar cliente específico → Aísla análisis para ese cliente
+- ✅ Seleccionar período temporal → Recalcula todas las métricas
+
+### **🔗 Cómo Funciona**
+La interactividad se logra mediante:
+- ✅ Medidas DAX sensibles al contexto de filtros
+- ✅ Relaciones correctamente definidas en el modelo
+- ✅ Segmentadores configurados para trabajar en conjunto
+- ✅ Sincronización automática de todas las visualizaciones
+
+## 7.10 Principales Insights Descubiertos
+
+- 📉 Las ventas presentan **variaciones temporales claras** con caídas y recuperaciones
+- 🗺️ Las ventas **no se distribuyen homogéneamente** entre ciudades
+- 💳 Existe **fuerte preferencia por ciertos métodos de pago**
+- 💰 El **ticket promedio es elevado**, indicando operaciones de mayor valor
+- 📊 La **diferencia entre ventas máxima/mínima** revela transacciones atípicas
+- 👥 Identificación clara de **clientes VIP vs ocasionales**
+
+## 7.11 Conclusión del Dashboard
+
+El dashboard cumple con:
+- ✅ **Análisis descriptivo** del desempeño comercial
+- ✅ **Enfoque temporal** clara evolución mensual
+- ✅ **Consideración de múltiples dimensiones**: volumen, valor, geografía, comportamiento
+- ✅ **Claridad visual** sin redundancias ni sobrecarga
+- ✅ **Utilidad analítica** como herramienta de toma de decisiones
+
+**Es una herramienta válida tanto para análisis académico como para apoyo estratégico empresarial.**
+
+## 7.12 Posibles Mejoras Futuras
+
+- 📊 Comparaciones contra objetivos/metas comerciales
+- 📈 Análisis Year-over-Year (YoY) y Month-over-Month (MoM) avanzado
+- 🤖 Incorporación de métricas predictivas (ML integration)
+- 🎯 Segmentación más profunda por comportamiento del cliente
+- 📱 Optimización para mobile/tablets
+- 🔔 Alertas automáticas para anomalías
+
+---
+
+# 8 Información, pasos, pseudocódigo y diagrama del programa (Sprint 1)
 
 Vamos a crear un programa en Python con el que se pueda visualizar de manera interactiva la documentación, para que los usuarios puedan acceder de manera sencilla a la información clave del proyecto.
 
-## 7.1 Contenidos accesibles desde el menú
+## 8.1 Contenidos accesibles desde el menú
 
     1. Tema, problema y solución
     2. Origen de los datos
@@ -482,19 +646,21 @@ Vamos a crear un programa en Python con el que se pueda visualizar de manera int
     4. Proceso de limpieza de datos
     5. Proceso de análisis estadístico descriptivo
     6. Implementación de Machine Learning
-    7. Insights de negocio principales
-    8. Escalas de medición
-    9. Sugerencias y mejoras con Copilot
-    10. Salir
+    7. Dashboard Power BI
+    8. Insights de negocio principales
+    9. Pseudocódigo del programa
+    10. Sugerencias y mejoras con Copilot
+    11. Diagrama de flujo
+    12. Salir
 
-## 7.2 Pasos
+## 8.2 Pasos
 
     1. Cargar en memoria la información de esta documentación.
     2. Mostrar un menú numérico con las secciones enumeradas.
     3. Según la opción que el usuario elija, se imprimirá la información correspondiente a esa sección.
     4. El programa seguirá mostrando el menú hasta que el usuario elija la opción de salir.
 
-## 7.3 Diagrama de flujo: en carpeta
+## 8.3 Diagrama de flujo: en carpeta
 
     +------------------------+
     |        INICIO          |
@@ -519,17 +685,19 @@ Vamos a crear un programa en Python con el que se pueda visualizar de manera int
                |
                v
     +-------------------------+
-    | Mostrar menú (1..10)    |
+    | Mostrar menú (1..12)    |
     | - 1 Tema/Problema       |
     | - 2 Origen datos        |
     | - 3 Estructura BD       |
     | - 4 Limpieza datos      |
     | - 5 Análisis estadístico|
     | - 6 Machine Learning    |
-    | - 7 Insights negocio    |
-    | - 8 Escalas medición    |
-    | - 9 Sugerencias         |
-    | - 10 Salir              |
+    | - 7 Power BI            |
+    | - 8 Insights negocio    |
+    | - 9 Pseudocódigo        |
+    | - 10 Sugerencias        |
+    | - 11 Diagrama (esto)    |
+    | - 12 Salir              |
     +-------------------------+
                |
                v
@@ -546,13 +714,13 @@ Vamos a crear un programa en Python con el que se pueda visualizar de manera int
        No                           Sí
         |                           v
         |                  +---------------------+
-        |                  | ¿Está entre 1 y 10? |
+        |                  | ¿Está entre 1 y 12? |
         |                  +---------------------+
         |                  |                     |
         |                  No                    Sí
         |                  |                     v
         |           +----------------+    +--------------------------+
-        |           | Mostrar error  |    | Opción válida (1..9):    |
+        |           | Mostrar error  |    | Opción válida (1..11):   |
         |           |"Ingrese número"|    | Mostrar sección          |
         |           +----------------+    +--------------------------+
         |                  |                     |
@@ -563,13 +731,13 @@ Vamos a crear un programa en Python con el que se pueda visualizar de manera int
                            v
            (volver a Bucle principal)
 
-    Si la opción es 10 -> Mostrar despedida y terminar.
+    Si la opción es 12 -> Mostrar despedida y terminar.
 
 ---
 
-# 8 🔍 Insights de Negocio Principales Descubiertos
+# 9 🔍 Insights de Negocio Principales Descubiertos
 
-## 7.1 Descubrimientos por Dimensión de Análisis
+## 9.1 Descubrimientos por Dimensión de Análisis
 
 ### **👥 Insights de Clientes:**
 - **🌍 Concentración geográfica** → Identificación de mercados principales
@@ -595,7 +763,7 @@ Vamos a crear un programa en Python con el que se pueda visualizar de manera int
 
 # 9 🏆 Conclusión del Proyecto
 
-**✅ Proyecto completado exitosamente en 3 fases:**
+**✅ Proyecto completado exitosamente en 4 fases:**
 
 ### **📊 Logros Alcanzados:**
 - **4 datasets procesados** con metodología estructurada
@@ -603,8 +771,11 @@ Vamos a crear un programa en Python con el que se pueda visualizar de manera int
 - **11 visualizaciones avanzadas** (barplots, lineplot, scatter, histogramas, boxplots)
 - **2 modelos de Machine Learning** implementados (K-Means + Regresión Lineal)
 - **Segmentación de 64 clientes** en 4 grupos diferenciados
+- **Dashboard Power BI completo** con KPIs, análisis temporal, geográfico y segmentaciones
+- **Medidas DAX** dinámicas y sensibles al contexto
+- **Visualizaciones interactivas** con sincronización automática
 - **Insights accionables** extraídos para toma de decisiones
-- **Colaboración efectiva** humano-IA documentada (Usuario 57-60% - IA 40-43%)
+- **Colaboración efectiva** humano-IA documentada (Usuario 70-72% - IA 28-30%)
 
 ### **🎯 Resultados Cuantificables:**
 - **Producto más vendido identificado:** Salsa de Tomate
@@ -615,23 +786,26 @@ Vamos a crear un programa en Python con el que se pueda visualizar de manera int
 - **Pico de ventas:** Mes 5 con ~560,000
 - **Clusters de clientes:** 4 segmentos con estrategias específicas
 - **Modelo predictivo:** Baseline funcional con métricas calculadas
+- **Dashboard Power BI:** 3 KPIs principales, 5+ tipos de análisis, interactividad total
 
 ### **📈 Preparado para fases siguientes:**
-- **Dashboards Power BI** con estructura optimizada
+- **Mejora de modelos ML** (ensemble, feature engineering)
 - **Estrategias de marketing personalizadas** por cluster de clientes
-- **Optimización de modelos ML** (ensemble, feature engineering)
+- **Integración de modelos predictivos** en Power BI
 - **Implementación de modelos avanzados** (Random Forest, Gradient Boosting)
+- **Alertas automáticas** para anomalías y desempeño
 - **Toma de decisiones estratégicas** con KPIs identificados
 
-### **💡 Ventajas de usar GitHub Copilot:**
+### **💡 Ventajas de la Solución Integral:**
 - ⚡ **65% más rápido** que desarrollo manual
-- 📊 **Visualizaciones profesionales** automáticas
+- 📊 **Visualizaciones profesionales** (Python + Power BI)
 - 🎯 **Código limpio** y documentado
-- 🔧 **Optimizaciones técnicas** (KDE, PCA, StandardScaler)
-- 🤖 **Implementación de algoritmos ML** con buenas prácticas
+- 🔧 **Optimizaciones técnicas** (KDE, PCA, StandardScaler, DAX)
+- 🤖 **Implementación completa** de análisis + visualización + ML
+- 🔄 **Herramienta interactiva** para toma de decisiones
 
 ---
 
 **👨‍💻 Proyecto:** José Yolic  
-**🤖 Desarrollado con:** GitHub Copilot  
+**🤖 Desarrollado con:** GitHub Copilot y Power BI  
 **📅 Fecha:** Diciembre 2025

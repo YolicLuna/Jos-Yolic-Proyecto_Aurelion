@@ -17,11 +17,12 @@ def mostrar_menu():
     print("4. Proceso de limpieza de datos")
     print("5. Proceso de análisis estadístico predictivo")
     print("6. Implementación de Machine Learning")
-    print("7. Insights de negocio principales")
-    print("8. Pseudocódigo del programa")
-    print("9. Sugerencias y mejoras con Copilot")
-    print("10. Diagrama de flujo")
-    print("11. Salir")
+    print("7. Dashboard Power BI")
+    print("8. Insights de negocio principales")
+    print("9. Pseudocódigo del programa")
+    print("10. Sugerencias y mejoras con Copilot")
+    print("11. Diagrama de flujo")
+    print("12. Salir")
     print("=====================")
 
 def cargar_documentacion():
@@ -42,6 +43,7 @@ Estado Actual del Proyecto:
 Fase 1: Limpieza de datos COMPLETADA
 Fase 2: Análisis estadístico predictivo COMPLETADA
 Fase 3: Implementación de Machine Learning COMPLETADA
+Fase 4: Dashboard Power BI COMPLETADA
 
 Descripción del problema a resolver o analizar:
 - Qué productos son los menos vendidos
@@ -55,7 +57,7 @@ Resultados Obtenidos:
 Vista integral del negocio con todas las dimensiones integradas
 Insights accionables extraídos de 4 datasets relacionales  
 Metodología reproducible documentada completamente
-Colaboración efectiva humano-IA (Usuario 57% - IA 43%)
+Colaboración efectiva humano-IA (Usuario 71% - IA 29%)
 """,
         2: """
 === Origen de los datos ===
@@ -182,8 +184,8 @@ Colaboración: Usuario vs GitHub Copilot
 
 | Contribuyente          | Porcentaje | Tipo de Aporte                        |
 |------------------------|------------|---------------------------------------|
-| Usuario (José Yolic)   | 57%        | Razonamiento estratégico, decisiones  |
-| GitHub Copilot         | 43%        | Implementación técnica, visualizaciones|
+| Usuario (José Yolic)   | 71%        | Razonamiento estratégico, decisiones  |
+| GitHub Copilot         | 29%        | Implementación técnica, visualizaciones|
 
 Síntesis: El usuario guió la estrategia y definió KPIs; Copilot materializó 
 el análisis técnico con visualizaciones profesionales.
@@ -241,8 +243,8 @@ Colaboración: Usuario vs GitHub Copilot
 
 | Contribuyente          | Porcentaje | Tipo de Aporte                        |
 |------------------------|------------|---------------------------------------|
-| Usuario (José Yolic)   | 60%        | Objetivos, features, interpretación   |
-| GitHub Copilot         | 40%        | Algoritmos, visualizaciones, código   |
+| Usuario (José Yolic)   | 72%        | Objetivos, features, interpretación   |
+| GitHub Copilot         | 28%        | Algoritmos, visualizaciones, código   |
 
 MODELO 1: Clustering K-Means
 
@@ -332,6 +334,122 @@ Logros:
 • Visualizaciones completas de ambos modelos
 """,
         7: """
+=== DASHBOARD POWER BI ===
+
+Desarrollado con Power BI Desktop - Dashboard interactivo para análisis de 
+ventas y desempeño comercial
+
+Objetivo General:
+Crear un dashboard interactivo que proporcione una visión clara del desempeño 
+comercial, permitiendo análisis temporal, segmentación por clientes, productos, 
+medios de pago y ubicación geográfica.
+
+Fuentes de Datos:
+• Clientes_limpio.csv
+• Productos_limpio.csv
+• Ventas_limpio.csv
+• Detalle_ventas_limpio.csv
+
+Preparación de Datos en Power BI:
+✅ Carga de archivos CSV
+✅ Eliminación de columnas redundantes
+✅ Corrección de tipos y formatos de datos
+✅ Creación de columnas derivadas (mes, año, etc.)
+✅ Unificación y estructuración para análisis
+
+Modelo de Datos:
+🔗 Estructura Relacional con tabla de Calendario
+✅ Tabla de Ventas (centro) conectada a:
+   - Tabla de Clientes (dimensión)
+   - Tabla de Productos (dimensión)
+   - Tabla de Detalle Ventas (hechos)
+   - Tabla de Calendario (dimensión temporal)
+
+Beneficios:
+✅ Cálculos correctos al aplicar filtros
+✅ Evita inconsistencias en resultados
+✅ Análisis a múltiples niveles
+
+Medidas DAX Implementadas:
+
+KPI Principales:
+• Ventas Totales - Suma de importes
+• Número de Ventas - Conteo de transacciones
+• Ticket Promedio - Importe promedio por venta
+• Venta Máxima/Mínima - Extremos de transacciones
+• Ventas Mensuales - Desglose temporal
+• Crecimiento Mensual (%) - Variación mes a mes
+
+Medidas de Clientes:
+• Clientes Activos - Número con compras
+• Clientes Top - Clientes de mayor gasto
+• Promedio por Cliente - Gasto promedio individual
+
+Jerarquías Temporales:
+📅 Año → Trimestre → Mes
+🔢 Orden correcto de meses
+📊 Columnas auxiliares para análisis temporal
+
+KPIs Principales del Dashboard:
+| KPI | Importancia |
+|-----|-------------|
+| Ventas Totales | ⭐⭐⭐ Principal |
+| Número de Ventas | ⭐⭐ Complementaria |
+| Ticket Promedio | ⭐⭐ Complementaria |
+
+Análisis y Segmentaciones:
+
+📊 Evolución Temporal:
+• Gráfico de evolución mensual de ventas
+• Identificación de tendencias y estacionalidad
+
+🏙️ Análisis Geográfico:
+• Segmentación por ciudad
+• Visualización con gráficos y mapa geográfico
+
+💳 Medio de Pago:
+• Porcentaje de ventas por método
+• Análisis de preferencias de clientes
+
+👥 Análisis de Clientes:
+• Ranking de clientes principales
+• Segmentación por frecuencia (frecuente, esporádico)
+
+📦 Productos y Categorías:
+• Análisis de ventas por categoría
+• Participación en ventas por producto
+
+Comportamiento Interactivo:
+
+🔄 Actualización Dinámica:
+✅ Seleccionar ciudad → Actualiza KPIs y gráficos
+✅ Seleccionar categoría → Filtra automáticamente
+✅ Seleccionar cliente → Aísla análisis
+✅ Seleccionar período → Recalcula métricas
+
+Principales Insights:
+• Variaciones temporales claras con caídas y recuperaciones
+• Ventas no homogéneas entre ciudades
+• Fuerte preferencia por ciertos métodos de pago
+• Ticket promedio elevado indicando operaciones de valor
+• Identificación clara de clientes VIP vs ocasionales
+
+Conclusión del Dashboard:
+✅ Análisis descriptivo del desempeño comercial
+✅ Enfoque temporal clara evolución mensual
+✅ Múltiples dimensiones: volumen, valor, geografía, comportamiento
+✅ Claridad visual sin redundancias
+✅ Utilidad analítica para toma de decisiones
+
+Posibles Mejoras Futuras:
+• Comparaciones contra objetivos/metas comerciales
+• Análisis Year-over-Year (YoY) y Month-over-Month (MoM) avanzado
+• Incorporación de métricas predictivas
+• Segmentación más profunda por comportamiento
+• Optimización para mobile/tablets
+• Alertas automáticas para anomalías
+""",
+        8: """
 === INSIGHTS DE NEGOCIO PRINCIPALES DESCUBIERTOS ===
 
 Descubrimientos por Dimensión de Análisis:
@@ -369,14 +487,17 @@ Distribuciones de Ventas:
 
 Conclusión del Proyecto:
 
-Proyecto completado exitosamente en 2 fases
+Proyecto completado exitosamente en 4 fases
 
 Logros Alcanzados:
 • 4 datasets procesados con metodología estructurada
 • Tabla relacional integrada unificando todas las dimensiones
 • 11 visualizaciones avanzadas (barplots, lineplot, scatter, histogramas, boxplots)
+• 2 modelos de Machine Learning (K-Means + Regresión Lineal)
+• Segmentación de 64 clientes en 4 grupos
+• Dashboard Power BI con KPIs e interactividad
 • Insights accionables extraídos para toma de decisiones
-• Colaboración efectiva humano-IA documentada (57%-43%)
+• Colaboración efectiva humano-IA documentada (Usuario 70-72% - IA 28-30%)
 
 Resultados Cuantificables:
 • Producto más vendido: Salsa de Tomate
@@ -385,15 +506,16 @@ Resultados Cuantificables:
 • Ciudad estratégica: Río Cuarto
 • Tendencia pago digital: QR en crecimiento constante
 • Pico de ventas: Mes 5 con ~560,000
+• Dashboard Power BI: 3 KPIs principales, múltiples análisis
 
 Preparado para fases siguientes:
-• Dashboards Power BI con estructura optimizada
-• Modelos de machine learning con features preparadas
-• Estrategias de marketing basadas en insights de clientes
-• Optimización de inventario según productos top
-• Toma de decisiones estratégicas con KPIs identificados
+• Mejora de modelos ML (ensemble, feature engineering)
+• Estrategias de marketing personalizadas por cluster
+• Integración de modelos predictivos en Power BI
+• Implementación de modelos avanzados
+• Toma de decisiones estratégicas con KPIs
 """,
-        8: """
+        9: """
 === Pseudocódigo del Programa ===
 
 Inicio Programa
@@ -404,7 +526,7 @@ Inicio Programa
     // Función para mostrar el menú
     Función mostrar_menu():
         Mostrar título "MENÚ PRINCIPAL"
-        Mostrar opciones numeradas del 1 al 10
+        Mostrar opciones numeradas del 1 al 12
 
     // Función para cargar la documentación
     Función cargar_documentacion():
@@ -429,10 +551,10 @@ Inicio Programa
             Intentar:
                 Leer opción del usuario
                 
-                Si opción es 10:
+                Si opción es 12:
                     Mostrar mensaje de despedida
                     Romper bucle
-                Sino Si opción está entre 1 y 9:
+                Sino Si opción está entre 1 y 11:
                     Mostrar sección correspondiente
                 Sino:
                     Mostrar error de opción inválida
@@ -446,7 +568,7 @@ Inicio Programa
         Ejecutar main()
 Fin Programa
 """,
-        9: """
+        10: """
 === Sugerencias y mejoras con Copilot ===
 
 Colaboración con GitHub Copilot:
@@ -457,12 +579,14 @@ Copilot desarrolló:
 • Cálculos de estadísticas descriptivas
 • Integración relacional de tablas
 • Documentación automática en notebooks
+• Modelos de Machine Learning (K-Means, Regresión Lineal)
 
 Usuario supervisó:
 • Dirección de metodología de análisis
 • Validación de insights generados
 • Especificación de métricas de negocio relevantes
 • Revisión de visualizaciones
+• Definición de objetivos ML
 
 Ventajas de usar Copilot:
 • 80% más rápido que análisis manual tradicional
@@ -470,15 +594,17 @@ Ventajas de usar Copilot:
 • Insights automáticos en comentarios de código
 • Integración relacional compleja automatizada
 • Documentación en tiempo real en notebooks
+• Implementación eficiente de algoritmos ML
 
 Valor añadido del enfoque con IA:
 • Toma de decisiones metodológicas automáticas pero fundamentadas
 • Identificación inteligente de variables aptas vs no aptas
 • Implementación de técnicas visuales apropiadas según contexto
 • Integración sistemática de múltiples fuentes de datos
-• Generación automática de insights con justificación metodológica
+• Automatización de procesos repetitivos
+• Optimización de código y rendimiento
 """,
-        10: """
+        11: """
 === Diagrama de Flujo (versión consola con cuadros) ===
 
     +------------------------+
@@ -504,18 +630,19 @@ Valor añadido del enfoque con IA:
                |
                v
     +-------------------------+
-    | Mostrar menú (1..11)    |
+    | Mostrar menú (1..12)    |
     | - 1 Tema/Problema       |
     | - 2 Origen datos        |
     | - 3 Estructura BD       |
     | - 4 Limpieza datos      |
     | - 5 Análisis estadístico|
     | - 6 Machine Learning    |
-    | - 7 Insights negocio    |
-    | - 8 Pseudocódigo        |
-    | - 9 Sugerencias         |
-    | - 10 Diagrama (esto)    |
-    | - 11 Salir              |
+    | - 7 Power BI            |
+    | - 8 Insights negocio    |
+    | - 9 Pseudocódigo        |
+    | - 10 Sugerencias        |
+    | - 11 Diagrama (esto)    |
+    | - 12 Salir              |
     +-------------------------+
                |
                v
@@ -532,13 +659,13 @@ Valor añadido del enfoque con IA:
        No                           Sí
         |                           v
         |                  +---------------------+
-        |                  | ¿Está entre 1 y 11? |
+        |                  | ¿Está entre 1 y 12? |
         |                  +---------------------+
         |                  |                     |
         |                  No                    Sí
         |                  |                     v
         |           +----------------+    +--------------------------+
-        |           | Mostrar error  |    | Opción válida (1..10):   |
+        |           | Mostrar error  |    | Opción válida (1..11):   |
         |           |"Ingrese número"|    | Mostrar sección          |
         |           +----------------+    +--------------------------+
         |                  |                     |
@@ -549,7 +676,7 @@ Valor añadido del enfoque con IA:
                            v
            (volver a Bucle principal)
 
-    Si la opción es 11 -> Mostrar despedida y terminar.
+    Si la opción es 12 -> Mostrar despedida y terminar.
 """
     }
     return info
@@ -572,13 +699,13 @@ def main():
         
         # Pedimos la opción al usuario
         try:
-            opcion = int(input("\nSeleccione una opción (1-11): "))
+            opcion = int(input("\nSeleccione una opción (1-12): "))
             
             # Verificamos la opción seleccionada
-            if opcion == 11:
+            if opcion == 12:
                 print("\n¡Gracias por usar el programa!")
                 break
-            elif opcion >= 1 and opcion <= 10:
+            elif opcion >= 1 and opcion <= 11:
                 mostrar_seccion(opcion, info)
             else:
                 print("\nError: Opción no válida")
