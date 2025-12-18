@@ -55,10 +55,16 @@ JoséYolic-Proyecto_Aurelion/
 │   ├── Analisis_Relacional.ipynb             # ⭐ Vista 360° integrada
 │   └── 📋 PROCESO_ANALISIS_DETALLADO.md      # Metodología de análisis
 │
-└── 📁 IBM_Ml/                                 # Machine Learning
-    ├── aurelion_ml.ipynb                      # ⭐ Modelos K-Means y Regresión
-    └── 📋 IMPLEMENTACION_ML.md                # Metodología de ML
-├── 📄 Dashboard_Aurelion.md                  # Documentación Power BI```
+├── 📁 IBM_Ml/                                 # Machine Learning
+│   ├── aurelion_ml.ipynb                      # ⭐ Modelos K-Means y Regresión
+│   └── 📋 IMPLEMENTACION_ML.md                # Metodología de ML
+│
+└── 📁 Dasboard_Power_BI/                      # Dashboard y visualización Power BI
+    ├── Dashboard_Aurelion.md                  # 📋 Documentación completa
+    ├── Dashboard_Aurelion.pbix                # 📊 Archivo Power BI Desktop
+    ├── Visuales_dashboard.ipynb               # 📓 Jupyter con análisis visuales
+    └── 📁 imagenes/                           # Capturas y gráficos del dashboard
+```
 
 ---
 
@@ -208,7 +214,12 @@ jupyter notebook Analisis_estadistico_descriptivo/
 jupyter notebook IBM_Ml/
 ```
 
-**⭐ Recomendaciones:** 
+**📊 Dashboard Power BI:**
+```bash
+# Ver archivos en Dasboard_Power_BI/
+# - Dashboard_Aurelion.pbix: Archivo Power BI Desktop
+# - Visuales_dashboard.ipynb: Jupyter con análisis de visuales
+``` 
 - Comenzar con `Analisis_Relacional.ipynb` para una vista integrada 360° del negocio
 - Explorar `aurelion_ml.ipynb` para ver modelos K-Means y Regresión Lineal
 
@@ -225,11 +236,12 @@ Accede a un menú interactivo con:
 4. Proceso de limpieza detallado
 5. Proceso de análisis estadístico predictivo
 6. Implementación de Machine Learning
-7. Insights de negocio principales
-8. Pseudocódigo del programa
-9. Sugerencias y mejoras con Copilot
-10. Diagrama de flujo
-11. Salir
+7. Dashboard Power BI
+8. Insights de negocio principales
+9. Pseudocódigo del programa
+10. Sugerencias y mejoras con Copilot
+11. Diagrama de flujo
+12. Salir
 
 ---
 
@@ -324,7 +336,7 @@ Para información detallada sobre cada fase del proyecto:
 - 🧹 **[PROCESO_LIMPIEZA_DETALLADO.md](Limpieza_de_datos/PROCESO_LIMPIEZA_DETALLADO.md)** - Metodología de limpieza paso a paso
 - 📊 **[PROCESO_ANALISIS_DETALLADO.md](Analisis_estadistico_descriptivo/PROCESO_ANALISIS_DETALLADO.md)** - Metodología de análisis estadístico
 - 🤖 **[IMPLEMENTACION_ML.md](IBM_Ml/IMPLEMENTACION_ML.md)** - Metodología de Machine Learning
-- 📊 **[Dashboard_Aurelion.md](Dashboard_Aurelion.md)** - Documentación del Dashboard Power BI
+- 📊 **[Dashboard_Aurelion.md](Dasboard_Power_BI/Dashboard_Aurelion.md)** - Documentación del Dashboard Power BI
 
 ---
 
