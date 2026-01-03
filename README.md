@@ -486,7 +486,8 @@ Proyecto educativo de análisis de datos
 
 **GitHub Copilot** - Asistente de IA para implementación técnica, optimizaciones y documentación  
 **Power BI Desktop** - Dashboards ejecutivos e interactivos  
-**Python** - Análisis de datos y Machine Learning (pandas, scikit-learn, matplotlib, seaborn)
+**Python** - Análisis de datos y Machine Learning (pandas, scikit-learn, matplotlib, seaborn)  
+**MySQL 8.0+** - Base de datos relacional con SQL
 
 ---
 
