@@ -115,6 +115,29 @@ incoherencias = (df['importe'] != df['importe_calculado']).sum()
 ```
 **Resultado:** Recálculo automático para garantizar consistencia
 
+### **5. 🏷️ Reclasificación de Productos (Transformación Crítica)**
+**Problema:** Productos mal categorizados entre "Alimentos" y "Limpieza"
+
+**Análisis realizado:**
+- 7 productos de higiene/limpieza etiquetados como Alimentos
+- 41 productos alimentarios etiquetados como Limpieza
+
+**Transformaciones aplicadas:**
+```python
+# Productos de LIMPIEZA mal etiquetados como Alimentos
+productos_limpieza = ['Desodorante Aerosol', 'Cepillo de Dientes', 
+                      'Mascarilla Capilar', 'Limpiavidrios 500ml', 
+                      'Esponjas x3', 'Shampoo 400ml', 'Servilletas x100']
+df.loc[df['nombre_producto'].isin(productos_limpieza), 'categoria'] = 'Limpieza'
+
+# Productos ALIMENTARIOS mal etiquetados como Limpieza  
+productos_alimentos = ['Pepsi 1.5L', 'Fanta Naranja 1.5L', 'Jugo de Naranja 1L', 
+                       'Energética Nitro 500ml', ... (41 productos totales)]
+df.loc[df['nombre_producto'].isin(productos_alimentos), 'categoria'] = 'Alimentos'
+```
+
+**Beneficio:** Distribución correcta de categorías para análisis OLAP y reportes de negocio
+
 ---
 
 ## 📈 Resultados Finales
@@ -144,7 +167,59 @@ incoherencias = (df['importe'] != df['importe_calculado']).sum()
 ✅ categoria → normalización y one-hot encoding
 ✅ nombre_producto → estandarización formato
 ✅ eliminación duplicados exactos
-```
+🔄 RECLASIFICACIÓN DE CATEGORÍAS:
+
+⚠️ Productos catalogados como Alimentos → LIMPIEZA:
+  - Desodorante Aerosol
+  - Cepillo de Dientes
+  - Mascarilla Capilar
+  - Limpiavidrios 500ml
+  - Esponjas x3
+  - Shampoo 400ml
+  - Servilletas x100
+
+⚠️ Productos catalogados como Limpieza → ALIMENTOS:
+  - Pepsi 1.5L
+  - Fanta Naranja 1.5L
+  - Jugo de Naranja 1L
+  - Energética Nitro 500ml
+  - Yerba Mate Intensa 1kg
+  - Té Negro 20 saquitos
+  - Leche Entera 1L
+  - Yogur Natural 200g
+  - Queso Rallado 150g
+  - Pan Lactal Blanco
+  - Medialunas de Manteca
+  - Galletitas Chocolate
+  - Alfajor Triple
+  - Papas Fritas Clásicas 100g
+  - Maní Salado 200g
+  - Chocolate Amargo 100g
+  - Turrón 50g
+  - Dulce de Leche 400g
+  - Mermelada de Frutilla 400g
+  - Helado Chocolate 1L
+  - Vinagre de Alcohol 500ml
+  - Arroz Largo Fino 1kg
+  - Lentejas Secas 500g
+  - Porotos Negros 500g
+  - Azúcar 1kg
+  - Caramelos Masticables
+  - Chupetín
+  - Stevia 100 sobres
+  - Avena Instantánea 250g
+  - Cerveza Negra 1L
+  - Vino Blanco 750ml
+  - Fernet 750ml
+  - Ron 700ml
+  - Whisky 750ml
+  - Pizza Congelada Muzzarella
+  - Verduras Congeladas Mix
+  - Helado de Frutilla 1L
+  - Aceitunas Negras 200g
+  - Queso Azul 150g
+  - Jugo en Polvo Limón
+  - Caldo Concentrado Carne```
 
 #### **3. Ventas.csv → Ventas_limpio.csv**
 ```python

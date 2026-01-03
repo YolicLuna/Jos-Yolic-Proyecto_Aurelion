@@ -40,12 +40,19 @@ Aplicar técnicas de Machine Learning sobre los datos de ventas para:
 # Variables seleccionadas por cliente:
 - cantidad: suma total de productos comprados
 - importe: gasto total acumulado
-- cat_Alimentos: % de compras en categoría Alimentos (0-1)
-- cat_Limpieza: % de compras en categoría Limpieza (0-1)
+- cat_Alimentos: % de compras en categoría Alimentos (0-1) ⚠️ POST-RECLASIFICACIÓN
+- cat_Limpieza: % de compras en categoría Limpieza (0-1) ⚠️ POST-RECLASIFICACIÓN
 
 # Métricas derivadas:
 - total_compras: número de transacciones
 - gasto_promedio: importe / total_compras
+
+# ⚠️ IMPORTANTE:
+# Estos datos incluyen la reclasificación de 48 productos:
+# - 7 productos de Limpieza (erróneamente etiquetados como Alimentos) → Limpieza
+# - 41 productos de Alimentos (erróneamente etiquetados como Limpieza) → Alimentos
+# Por lo tanto, las proporciones cat_Alimentos y cat_Limpieza por cliente 
+# reflejan la categorización CORRECTA, no la original con errores.
 ```
 
 ### **⚙️ Preprocesamiento**
@@ -62,6 +69,31 @@ df_clientes = df.groupby("nombre_cliente").agg({
 scaler = StandardScaler()
 df_scaled = scaler.fit_transform(df_model)
 ```
+
+### **⚠️ IMPACTO DE RECLASIFICACIÓN EN K-MEANS**
+
+**Cambios en los datos de entrada:**
+```
+De 48 productos mal categorizados antes de clustering:
+├─ 7 productos de Limpieza → reclasificados correctamente a Limpieza
+└─ 41 productos de Alimentos → reclasificados correctamente a Alimentos
+
+Efecto en las variables de entrada:
+├─ cat_Alimentos (media por cliente): AUMENTÓ significativamente
+├─ cat_Limpieza (media por cliente): DISMINUYÓ significativamente
+└─ cantidad e importe: SIN CAMBIOS (dependen de id_venta, no de categorización)
+```
+
+**Impacto en los clusters:**
+- ✅ Cantidad de clientes por cluster: **PODRÍA CAMBIAR** (reagrupación)
+- ⚠️ Perfiles de categoría (% Alimentos vs % Limpieza): **DEFINITIVAMENTE CAMBIÓ**
+- ✅ Cantidad e importe promedio: **SIN CAMBIOS** (invariables)
+- ⚠️ Interpretación de especialización: **ACTUALIZADA**
+
+**Acción realizada:**
+- Los datos del clustering fueron regenerados automáticamente con `Productos_limpio.csv`
+- Las proporciones cat_Alimentos y cat_Limpieza reflejan la **categorización correcta**
+- Los resultados mostrados incluyen estos cambios
 
 ### **🔢 Configuración del Modelo**
 ```python
@@ -82,6 +114,9 @@ pca_result = pca.fit_transform(df_scaled)
 
 ### **📈 Resultados del Clustering**
 
+#### **⚠️ NOTA IMPORTANTE**
+*Los resultados a continuación incluyen la reclasificación correcta de 48 productos. Las proporciones de Alimentos vs Limpieza reflejan la categorización actual (post-limpieza), no los datos originales con errores.*
+
 #### **Distribución de Clientes por Cluster**
 
 | Cluster | Cantidad de Clientes |
@@ -92,6 +127,11 @@ pca_result = pca.fit_transform(df_scaled)
 | **3**   | 10                  |
 
 #### **Perfil de Cada Cluster**
+
+**⚠️ Interpretación actualizada (post-reclasificación):**
+- Los porcentajes de Alimentos y Limpieza representan la **distribución correcta** de productos
+- 48 productos fueron reclasificados para reflejar sus categorías reales
+- Las proporciones pueden haber cambiado significativamente respecto a datos con errores
 
 | Cluster | Cantidad Promedio | Importe Promedio | % Alimentos | % Limpieza | **Interpretación** |
 |---------|-------------------|------------------|-------------|------------|--------------------|
@@ -268,23 +308,35 @@ plt.axvline(0, color='red', linestyle='--')
 
 ### **Modelos Implementados**
 
-| **Modelo** | **Tipo** | **Objetivo** | **Resultado** |
-|------------|----------|--------------|---------------|
-| **K-Means** | Clustering | Segmentar clientes | ✅ 4 clusters bien diferenciados |
-| **Regresión Lineal** | Supervisado | Predecir importe | ⚠️ Funcional con limitaciones |
+| **Modelo** | **Tipo** | **Objetivo** | **Resultado** | **Post-Reclasificación** |
+|------------|----------|--------------|---------------|-------------------------|
+| **K-Means** | Clustering | Segmentar clientes | ✅ 4 clusters bien diferenciados | ⚠️ Datos categorizados correctamente |
+| **Regresión Lineal** | Supervisado | Predecir importe | ⚠️ Funcional con limitaciones | ✅ Invariable (sin cambios) |
 
 ### **Logros Alcanzados**
-- ✅ Segmentación exitosa de 64 clientes en 4 grupos
-- ✅ Identificación de clientes VIP (Cluster 1)
-- ✅ Modelo predictivo baseline implementado
+- ✅ Segmentación exitosa de ~64 clientes en 4 grupos (con datos post-reclasificación)
+- ✅ Identificación de clientes VIP (Cluster 1) basada en categorías correctas
+- ✅ Modelo predictivo baseline implementado (invariable a reclasificación)
 - ✅ Visualizaciones completas de ambos modelos
 - ✅ Métricas de evaluación calculadas
 
+### **Consideraciones por Reclasificación de Productos**
+
+**En K-Means:**
+- ⚠️ Los perfiles de especialización (% Alimentos vs % Limpieza) **fueron actualizados**
+- ⚠️ La composición de clusters **podría haber cambiado**
+- ✅ La metodología y número de clusters **se mantiene válida**
+- ✅ Las estrategias de negocio **siguen siendo aplicables**
+
+**En Regresión Lineal:**
+- ✅ **SIN CAMBIOS** - El modelo predice importes basándose en cantidad y precio unitario
+- ✅ Variables predictoras (cantidad, precio) no fueron afectadas
+
 ### **Preparado para:**
-- 📊 Estrategias de marketing personalizadas por cluster
+- 📊 Estrategias de marketing personalizadas por cluster (basadas en categorización correcta)
 - 🎯 Optimización de modelos predictivos
 - 🔄 Implementación de modelos más avanzados
-- 💼 Toma de decisiones basada en ML
+- 💼 Toma de decisiones basada en ML con datos íntegros
 
 ---
 

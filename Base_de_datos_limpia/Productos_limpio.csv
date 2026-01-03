@@ -1,8 +1,8 @@
 id_producto,nombre_producto,precio_unitario,cat_Alimentos,cat_Limpieza
 1,Coca Cola 1.5L,2347,1,0
-2,Pepsi 1.5L,4973,0,1
+2,Pepsi 1.5L,4973,1,0
 3,Sprite 1.5L,4964,1,0
-4,Fanta Naranja 1.5L,2033,0,1
+4,Fanta Naranja 1.5L,2033,1,0
 5,Agua Mineral 500Ml,4777,1,0
 6,Jugo De Naranja 1L,4170,0,1
 7,Jugo De Manzana 1L,3269,1,0
@@ -12,19 +12,19 @@ id_producto,nombre_producto,precio_unitario,cat_Alimentos,cat_Limpieza
 11,Café Molido 250G,2053,1,0
 12,Té Negro 20 Saquitos,570,0,1
 13,Té Verde 20 Saquitos,2383,1,0
-14,Leche Entera 1L,1723,0,1
+14,Leche Entera 1L,1723,1,0
 15,Leche Descremada 1L,2538,1,0
 16,Yogur Natural 200G,4613,0,1
 17,Queso Cremoso 500G,4834,1,0
 18,Queso Rallado 150G,3444,0,1
 19,Manteca 200G,3251,1,0
-20,Pan Lactal Blanco,1571,0,1
+20,Pan Lactal Blanco,1571,1,0
 21,Pan Lactal Integral,272,1,0
 22,Medialunas De Manteca,2069,0,1
 23,Bizcochos Salados,2380,1,0
-24,Galletitas Chocolate,1305,0,1
+24,Galletitas Chocolate,1305,1,0
 25,Galletitas Vainilla,4015,1,0
-26,Alfajor Triple,1001,0,1
+26,Alfajor Triple,1001,1,0
 27,Alfajor Simple,2502,1,0
 28,Papas Fritas Clásicas 100G,936,0,1
 29,Papas Fritas Onduladas 100G,1868,1,0
@@ -38,7 +38,7 @@ id_producto,nombre_producto,precio_unitario,cat_Alimentos,cat_Limpieza
 37,Mermelada De Durazno 400G,3196,1,0
 38,Mermelada De Frutilla 400G,1584,0,1
 39,Helado Vainilla 1L,469,1,0
-40,Helado Chocolate 1L,1215,0,1
+40,Helado Chocolate 1L,1215,1,0
 41,Aceite De Girasol 1L,860,1,0
 42,Vinagre De Alcohol 500Ml,1195,0,1
 43,Salsa De Tomate 500G,887,1,0
@@ -56,15 +56,15 @@ id_producto,nombre_producto,precio_unitario,cat_Alimentos,cat_Limpieza
 55,Shampoo 400Ml,1407,1,0
 56,Papel Higiénico X4,2532,0,1
 57,Servilletas X100,4520,1,0
-58,Caramelos Masticables,4752,0,1
+58,Caramelos Masticables,4752,1,0
 59,Chicle Menta,3612,1,0
-60,Chupetín,4647,0,1
+60,Chupetín,4647,1,0
 61,Miel Pura 250G,4982,1,0
 62,Stevia 100 Sobres,3848,0,1
 63,Granola 250G,4337,1,0
 64,Avena Instantánea 250G,3953,0,1
 65,Cerveza Rubia 1L,2423,1,0
-66,Cerveza Negra 1L,1533,0,1
+66,Cerveza Negra 1L,1533,1,0
 67,Vino Tinto Malbec 750Ml,4719,1,0
 68,Vino Blanco 750Ml,2684,0,1
 69,Sidra 750Ml,744,1,0
@@ -74,9 +74,9 @@ id_producto,nombre_producto,precio_unitario,cat_Alimentos,cat_Limpieza
 73,Gin 700Ml,1561,1,0
 74,Whisky 750Ml,2953,0,1
 75,Licor De Café 700Ml,3204,1,0
-76,Pizza Congelada Muzzarella,4286,0,1
+76,Pizza Congelada Muzzarella,4286,1,0
 77,Empanadas Congeladas,4778,1,0
-78,Verduras Congeladas Mix,4289,0,1
+78,Verduras Congeladas Mix,4289,1,0
 79,Hamburguesas Congeladas X4,2420,1,0
 80,Helado De Frutilla 1L,1981,0,1
 81,Aceitunas Verdes 200G,2520,1,0
@@ -86,14 +86,14 @@ id_producto,nombre_producto,precio_unitario,cat_Alimentos,cat_Limpieza
 85,Jugo En Polvo Naranja,1856,1,0
 86,Jugo En Polvo Limón,4090,0,1
 87,Sopa Instantánea Pollo,1679,1,0
-88,Caldo Concentrado Carne,2570,0,1
+88,Caldo Concentrado Carne,2570,1,0
 89,Caldo Concentrado Verdura,1003,1,0
 90,Toallas Húmedas X50,2902,0,1
-91,Desodorante Aerosol,4690,1,0
+91,Desodorante Aerosol,4690,0,1
 92,Crema Dental 90G,2512,0,1
 93,Cepillo De Dientes,2142,1,0
 94,Hilo Dental,1418,0,1
-95,Mascarilla Capilar,1581,1,0
+95,Mascarilla Capilar,1581,0,1
 96,Suavizante 1L,4920,0,1
 97,Limpiavidrios 500Ml,872,1,0
 98,Desengrasante 500Ml,2843,0,1

@@ -73,6 +73,10 @@ analisis_relacional = pd.merge(detalle_productos, ventas_clientes, on='id_venta'
 ### **4. 🗺️ Análisis Geográfico**
 - Ventas por ciudad → Río Cuarto (#1)
 - Ventas por categoría (Alimentos vs Limpieza)
+  - **⚠️ Actualizado post-reclasificación:** 48 productos fueron reclasificados en la fase de limpieza:
+    - 7 productos de higiene/limpieza (erróneamente clasificados como Alimentos) → Limpieza
+    - 41 productos alimentarios (erróneamente clasificados como Limpieza) → Alimentos
+  - Esto modificó significativamente la distribución proporcional de ambas categorías
 - Visualización: 3 barplots
 
 ### **5. 💳 Métodos de Pago**
@@ -127,19 +131,39 @@ analisis_relacional.dropna(subset=cols_numericas)
 | Distribución | Histograma + KDE |
 | Outliers | Boxplot |
 
+### **4. ⚠️ Impacto de Reclasificación de Productos en el Análisis**
+
+**Decisión de normalización en limpieza de datos:**
+```
+De 48 productos mal categorizados:
+├─ 7 productos de Limpieza estaban etiquetados como Alimentos
+└─ 41 productos de Alimentos estaban etiquetados como Limpieza
+```
+
+**Impacto en análisis de categorías:**
+- **Antes:** Distribución desbalanceada e incorrecta entre Alimentos y Limpieza
+- **Después:** Distribución actualizada que refleja la categorización correcta
+- **Afectados directamente:** Gráficos de "Ventas por categoría" (Alimentos vs Limpieza)
+- **No afectados:** Tops de productos, clientes, ciudades y métodos de pago (dependen de nombres/IDs, no de categorías)
+
+**Acción tomada:**
+- Regeneración automática de visualizaciones post-limpieza
+- Los análisis geográficos y temporales se ejecutan sobre datos reclasificados correctamente
+
 ---
 
 ## 📊 Resultados Principales
 
-| **Métrica** | **Resultado** |
-|-------------|---------------|
-| **Producto más vendido** | Salsa de Tomate |
-| **Producto más rentable** | Desodorante Aerosol |
-| **Cliente VIP** | Agustina Flores |
-| **Ciudad principal** | Río Cuarto |
-| **Método de pago preferido** | Efectivo (>100 ventas) |
-| **Mes con más ventas** | Mes 5 (~560,000) |
-| **Tendencia QR** | Crecimiento progresivo |
+| **Métrica** | **Resultado** | **Nota** |
+|-------------|---------------|---------|
+| **Producto más vendido** | Salsa de Tomate | Invariable a reclasificación |
+| **Producto más rentable** | Desodorante Aerosol | Invariable a reclasificación |
+| **Cliente VIP** | Agustina Flores | Invariable a reclasificación |
+| **Ciudad principal** | Río Cuarto | Invariable a reclasificación |
+| **Método de pago preferido** | Efectivo (>100 ventas) | Invariable a reclasificación |
+| **Mes con más ventas** | Mes 5 (~560,000) | Invariable a reclasificación |
+| **Tendencia QR** | Crecimiento progresivo | Invariable a reclasificación |
+| **Distribución Alimentos/Limpieza** | ⚠️ Actualizada post-reclasificación | **Afectado por correcciones** |
 
 ---
 
@@ -167,15 +191,16 @@ analisis_relacional.dropna(subset=cols_numericas)
 ## 🏆 Conclusión
 
 **✅ Completado:**
-- 4 datasets integrados
-- 11 visualizaciones avanzadas
+- 4 datasets integrados con integridad relacional
+- 11 visualizaciones avanzadas con datos post-limpieza
 - Múltiples segmentaciones (ciudad, categoría, tiempo, pago)
 - Insights de negocio accionables
+- **⚠️ Análisis ejecutado post-reclasificación:** 48 productos categorizados correctamente (7 a Limpieza, 41 a Alimentos)
 
 **🎯 Preparado para:**
-- Dashboards Power BI
-- Machine Learning
-- Toma de decisiones estratégicas
+- Dashboards Power BI (con datos categorizados correctamente)
+- Machine Learning (features con distribuciones actualizadas)
+- Toma de decisiones estratégicas (basadas en categorías reales)
 
 ---
 

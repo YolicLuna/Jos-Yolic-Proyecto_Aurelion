@@ -11,7 +11,8 @@
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-orange.svg)](https://scikit-learn.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org/)
 [![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-FFC300.svg)](https://powerbi.microsoft.com/)
-[![Status](https://img.shields.io/badge/Status-Fase%204%20Completada-brightgreen.svg)]()
+[![MySQL](https://img.shields.io/badge/MySQL-8.0+-00758F.svg)](https://www.mysql.com/)
+[![Status](https://img.shields.io/badge/Status-Fase%205%20Completada-brightgreen.svg)]()
 
 ---
 
@@ -60,11 +61,24 @@ JoséYolic-Proyecto_Aurelion/
 │   ├── aurelion_ml.ipynb                      # ⭐ Modelos K-Means y Regresión
 │   └── 📋 IMPLEMENTACION_ML.md                # Metodología de ML
 │
-└── 📁 Dasboard_Power_BI/                      # Dashboard y visualización Power BI
-    ├── Dashboard_Aurelion.md                  # 📋 Documentación completa
-    ├── Dashboard_Aurelion.pbix                # 📊 Archivo Power BI Desktop
-    ├── Visuales_dashboard.ipynb               # 📓 Jupyter con análisis visuales
-    └── 📁 imagenes/                           # Capturas y gráficos del dashboard
+├── 📁 Dasboard_Power_BI/                      # Dashboard y visualización Power BI
+│   ├── Dashboard_Aurelion.md                  # 📋 Documentación completa
+│   ├── Dashboard_Aurelion.pbix                # 📊 Archivo Power BI Desktop
+│   ├── Visuales_dashboard.ipynb               # 📓 Jupyter con análisis visuales
+│   └── 📁 imagenes/                           # Capturas y gráficos del dashboard
+│
+└── 📁 5_SQL_Aurelion/                         # Base de Datos MySQL (EXTRA)
+    ├── 2_Creacion_base_de_datos.sql           # Estructura relacional (4 tablas)
+    ├── 3_Carga_de_datos.sql                   # Carga de 612 registros
+    ├── 4_Exploracion_limpieza_transformacion.sql # Análisis exploratorio
+    ├── 6_JOIN'S.sql                           # 9 JOINs de diferentes complejidades
+    ├── 📋 Documentacion_MySQL_Aurelin.md      # 📋 Documentación completa
+    └── 📁 5_Analisis_estadistico_descriptivo/ # 4 scripts de análisis por tabla
+        ├── 1_Tabla_Clientes.sql
+        ├── 2_Tabla_Productos.sql
+        ├── 3_Tabla_Ventas.sql
+        └── 4_Tabla_Detalle_Ventas.sql
+
 ```
 
 ---
@@ -146,11 +160,23 @@ Dashboards ejecutivos y visualizaciones interactivas:
 - 📈 **Jerarquías temporales** (Año → Trimestre → Mes)
 - 🔍 Identificación de **tendencias, patrones estacionales y anomalías**
 
-> 📋 **Documentación:** Ver [`Dashboard_Aurelion.md`](Dashboard_Aurelion.md)
+> 📋 **Documentación:** Ver [`Dashboard_Aurelion.md`](Dasboard_Power_BI/Dashboard_Aurelion.md)
 
-### **🔄 Fase 5: Optimización de Modelos ML** *(PENDIENTE)*
+### **✅ Fase 5: Base de Datos MySQL** *(COMPLETADA - EXTRA)*
 
-Modelos ensemble y feature engineering avanzado. Integración de modelos predictivos en Power BI.
+Implementación de base de datos relacional completa:
+
+- 🗄️ **4 tablas normalizadas (3NF)** con integridad referencial
+- 📊 **612 registros cargados y validados**
+- 🔄 **9 JOINs SQL** de diferentes complejidades (INNER, LEFT, multitabla)
+- 📈 **4 análisis estadísticos SQL** por tabla con insights de negocio
+- 🔍 **Reclasificación de 48 productos** ejecutada y verificada
+- 💾 **Scripts SQL completos** para reproducción en MySQL 8.0+
+- 📋 **Análisis exploratorio** y transformaciones de datos
+
+> 📋 **Documentación:** Ver [`Documentacion_MySQL_Aurelin.md`](5_SQL_Aurelion/Documentacion_MySQL_Aurelin.md)
+> 
+> **⚠️ Nota:** Este módulo NO forma parte del proyecto del curso. Es un **extra adicional** incluido por el usuario para demostrar competencia en MySQL y bases de datos relacionales.
 
 ---
 
@@ -162,8 +188,8 @@ Este proyecto demuestra una **colaboración efectiva entre razonamiento humano y
 
 | Contribuyente | Porcentaje | Tipo de Aporte |
 |--------------|------------|----------------|
-| **👨‍🏫 Usuario (José Yolic)** | **70-72%** | Razonamiento estratégico, decisiones metodológicas, interpretación de negocio, diseño e implementación de Dashboard Power BI |
-| **🤖 GitHub Copilot** | **28-30%** | Implementación técnica, código Python, documentación, optimizaciones (Fases 1-3) |
+| **👨‍🏫 Usuario (José Yolic)** | **~71%** | Razonamiento estratégico, decisiones metodológicas, interpretación de negocio, diseño e implementación de Dashboard Power BI, implementación completa de MySQL |
+| **🤖 GitHub Copilot** | **~29%** | Implementación técnica, código Python, documentación, optimizaciones (Fases 1-3), asistencia en JOINs SQL |
 
 ### **🎯 Valor de Cada Contribuyente**
 
@@ -215,6 +241,13 @@ jupyter notebook Analisis_estadistico_descriptivo/
 jupyter notebook IBM_Ml/
 ```
 
+**📊 Base de Datos MySQL** (EXTRA):
+```bash
+# Ver archivos en 5_SQL_Aurelion/
+# - Documentacion_MySQL_Aurelin.md: Documentación ejecutiva completa
+# - Scripts SQL en .sql para implementación en MySQL 8.0+
+```
+
 **📊 Dashboard Power BI:**
 ```bash
 # Ver archivos en Dasboard_Power_BI/
@@ -238,11 +271,12 @@ Accede a un menú interactivo con:
 5. Proceso de análisis estadístico predictivo
 6. Implementación de Machine Learning
 7. Dashboard Power BI
-8. Insights de negocio principales
-9. Pseudocódigo del programa
-10. Sugerencias y mejoras con Copilot
-11. Diagrama de flujo
-12. Salir
+8. Implementación SQL - Base de Datos MySQL (EXTRA)
+9. Insights de negocio principales
+10. Pseudocódigo del programa
+11. Sugerencias y mejoras con Copilot
+12. Diagrama de flujo
+13. Salir
 
 ---
 
@@ -349,6 +383,8 @@ Accede a un menú interactivo con:
 - **Seaborn** - Visualizaciones estadísticas avanzadas
 - **Scikit-learn** - Machine Learning (K-Means, Regresión Lineal)
 - **Jupyter Notebook** - Entorno de desarrollo interactivo
+- **MySQL 8.0+** - Base de datos relacional
+- **SQL** - Lenguaje de consultas y transformaciones
 - **GitHub Copilot** - Asistente de IA para desarrollo
 - **Power BI Desktop** - Creación de dashboards interactivos, modelado de datos, medidas DAX y visualización de KPIs
 - **Visual Studio Code** - Editor de código para desarrollo en Python, análisis de datos y control de versiones con Git
@@ -366,6 +402,7 @@ Para información detallada sobre cada fase del proyecto:
 - 📊 **[PROCESO_ANALISIS_DETALLADO.md](Analisis_estadistico_descriptivo/PROCESO_ANALISIS_DETALLADO.md)** - Metodología de análisis estadístico
 - 🤖 **[IMPLEMENTACION_ML.md](IBM_Ml/IMPLEMENTACION_ML.md)** - Metodología de Machine Learning
 - 📊 **[Dashboard_Aurelion.md](Dasboard_Power_BI/Dashboard_Aurelion.md)** - Documentación del Dashboard Power BI
+- 🗄️ **[Documentacion_MySQL_Aurelin.md](5_SQL_Aurelion/Documentacion_MySQL_Aurelin.md)** - Documentación de Base de Datos MySQL
 
 ---
 
@@ -398,6 +435,15 @@ Para información detallada sobre cada fase del proyecto:
 - Segmentadores interactivos con sincronización automática
 - Visualizaciones multidimensionales
 
+### **✅ Base de Datos MySQL (EXTRA)**
+- Estructura relacional completa (4 tablas normalizadas 3NF)
+- 612 registros validados e integrados
+- 9 JOINs SQL implementados
+- 4 análisis estadísticos por tabla
+- Reclasificación de 48 productos ejecutada
+- Scripts SQL reproducibles para MySQL 8.0+
+- Documentación ejecutiva sin código duplicado
+
 ### **✅ Documentación**
 - Proceso metodológico completo documentado
 - Decisiones técnicas justificadas
@@ -409,16 +455,19 @@ Para información detallada sobre cada fase del proyecto:
 
 Este proyecto demuestra un **enfoque profesional de Data Analysis**, combinando:
 
-- ✅ **Metodología estructurada** con criterios claros (4 fases completadas)
+- ✅ **Metodología estructurada** con criterios claros (5 fases: 4 del curso + 1 extra SQL)
 - ✅ **Técnicas estadísticas apropiadas** para cada tipo de variable
-- ✅ **Integración relacional completa** para insights multidimensionales
+- ✅ **Integración relacional completa** para insights multidimensionales (Python + MySQL)
 - ✅ **Machine Learning implementado** con 2 modelos funcionales
 - ✅ **Dashboard Power BI ejecutivo** con análisis interactivos multidimensionales
-- ✅ **Colaboración efectiva** entre razonamiento humano y asistencia de IA
+- ✅ **Base de datos relacional MySQL** con 4 tablas y 612 registros
+- ✅ **Análisis SQL avanzado** con 9 JOINs y 4 análisis por tabla
+- ✅ **Colaboración efectiva** entre razonamiento humano y asistencia de IA (~71% usuario, ~29% IA)
 - ✅ **Documentación exhaustiva** para reproducibilidad
 
 **🎯 Datos listos para:**
 - ✅ Dashboards ejecutivos y visualizaciones Power BI (implementado)
+- ✅ Análisis SQL avanzado con bases de datos relacionales (implementado)
 - Estrategias de marketing personalizadas por cluster
 - Optimización de portfolio de productos
 - Mejora de modelos predictivos (ensemble, feature engineering)
@@ -430,6 +479,14 @@ Este proyecto demuestra un **enfoque profesional de Data Analysis**, combinando:
 
 **José Yolic**  
 Proyecto educativo de análisis de datos
+
+---
+
+## 🤖 Desarrollado Con
+
+**GitHub Copilot** - Asistente de IA para implementación técnica, optimizaciones y documentación  
+**Power BI Desktop** - Dashboards ejecutivos e interactivos  
+**Python** - Análisis de datos y Machine Learning (pandas, scikit-learn, matplotlib, seaborn)
 
 ---
 

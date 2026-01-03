@@ -18,11 +18,12 @@ def mostrar_menu():
     print("5. Proceso de análisis estadístico predictivo")
     print("6. Implementación de Machine Learning")
     print("7. Dashboard Power BI")
-    print("8. Insights de negocio principales")
-    print("9. Pseudocódigo del programa")
-    print("10. Sugerencias y mejoras con Copilot")
-    print("11. Diagrama de flujo")
-    print("12. Salir")
+    print("8. Implementación SQL - Base de Datos MySQL (EXTRA)")
+    print("9. Insights de negocio principales")
+    print("10. Pseudocódigo del programa")
+    print("11. Sugerencias y mejoras con Copilot")
+    print("12. Diagrama de flujo")
+    print("13. Salir")
     print("=====================")
 
 def cargar_documentacion():
@@ -450,6 +451,73 @@ Posibles Mejoras Futuras:
 • Alertas automáticas para anomalías
 """,
         8: """
+=== IMPLEMENTACIÓN SQL - BASE DE DATOS AURELION (EXTRA) ===
+
+Nota importante: Este módulo SQL NO forma parte del proyecto original del curso.
+Es un extra adicional para demostrar competencia en MySQL y bases de datos relacionales.
+
+🤝 Colaboración: Usuario ~92% | GitHub Copilot ~8%
+
+📋 Objetivo General:
+Implementar una base de datos relacional completa en MySQL que replique la estructura de datos
+del proyecto Aurelion, permitiendo:
+1. Crear estructura relacional con tablas y claves
+2. Cargar datos limpios desde CSV
+3. Explorar y transformar datos con SQL
+4. Realizar análisis estadístico descriptivo
+5. Integrar datos multitabla con JOINs complejos
+
+🗄️ Arquitectura de la Base de Datos:
+4 tablas normalizadas (3NF):
+- Clientes ←→ Ventas ←→ Detalle_Ventas ←→ Productos
+- 612 registros totales cargados
+- Integridad referencial garantizada mediante Foreign Keys
+
+📁 Archivos de Implementación:
+
+1. 2_Creacion_base_de_datos.sql
+   - Estructura completa de 4 tablas
+   - Claves primarias y foráneas
+   - Tipos de datos optimizados
+
+2. 3_Carga_de_datos.sql
+   - Clientes: 100 | Productos: 100
+   - Ventas: 120 | Detalle_Ventas: 492
+   - Total: 612 registros
+
+3. 4_Exploracion_limpieza_transformacion.sql
+   - Análisis exploratorio de datos
+   - Reclasificación de 48 productos (7 a Limpieza, 41 a Alimentos)
+   - Resultado: 84% Alimentos, 16% Limpieza
+   - Columnas derivadas para análisis temporal
+
+4. 6_JOIN'S.sql
+   - 9 JOINs implementados (INNER, LEFT, múltiples tablas)
+   - Análisis relacional 360°
+   - Identificación de clientes/productos inactivos
+
+5. 5_Analisis_estadistico_descriptivo/ (Carpeta)
+   - 4 scripts de análisis por tabla
+   - Estadísticas descriptivas por entidad
+   - Insights de negocio por dimensión
+
+✅ Logros Alcanzados:
+- Base de datos relacional con 4 tablas normalizadas
+- 612 registros cargados y validados
+- 48 productos reclasificados correctamente
+- 4 análisis estadísticos por tabla
+- 9 JOINs de diferentes complejidades
+- Transformaciones ejecutadas y verificadas
+
+🔧 Conceptos SQL Implementados:
+- DDL: CREATE, ALTER TABLE
+- DML: LOAD DATA, UPDATE, SELECT
+- JOINs: INNER, LEFT (hasta 4-way)
+- Agregaciones: COUNT, SUM, AVG, GROUP BY, ORDER BY
+- Filtrado: WHERE, BETWEEN, LIKE, IN
+- Funciones: MONTHNAME, DISTINCT, CASE
+""",
+        9: """
 === INSIGHTS DE NEGOCIO PRINCIPALES DESCUBIERTOS ===
 
 Descubrimientos por Dimensión de Análisis:
@@ -515,7 +583,7 @@ Preparado para fases siguientes:
 • Implementación de modelos avanzados
 • Toma de decisiones estratégicas con KPIs
 """,
-        9: """
+        10: """
 === Pseudocódigo del Programa ===
 
 Inicio Programa
@@ -568,7 +636,7 @@ Inicio Programa
         Ejecutar main()
 Fin Programa
 """,
-        10: """
+        11: """
 === Sugerencias y mejoras con Copilot ===
 
 Colaboración con GitHub Copilot:
@@ -604,7 +672,7 @@ Valor añadido del enfoque con IA:
 • Automatización de procesos repetitivos
 • Optimización de código y rendimiento
 """,
-        11: """
+        12: """
 === Diagrama de Flujo (versión consola con cuadros) ===
 
     +------------------------+
@@ -630,7 +698,7 @@ Valor añadido del enfoque con IA:
                |
                v
     +-------------------------+
-    | Mostrar menú (1..12)    |
+    | Mostrar menú (1..13)    |
     | - 1 Tema/Problema       |
     | - 2 Origen datos        |
     | - 3 Estructura BD       |
@@ -638,11 +706,12 @@ Valor añadido del enfoque con IA:
     | - 5 Análisis estadístico|
     | - 6 Machine Learning    |
     | - 7 Power BI            |
-    | - 8 Insights negocio    |
-    | - 9 Pseudocódigo        |
-    | - 10 Sugerencias        |
-    | - 11 Diagrama (esto)    |
-    | - 12 Salir              |
+    | - 8 SQL (EXTRA)         |
+    | - 9 Insights negocio    |
+    | - 10 Pseudocódigo       |
+    | - 11 Sugerencias        |
+    | - 12 Diagrama (esto)    |
+    | - 13 Salir              |
     +-------------------------+
                |
                v
@@ -659,7 +728,7 @@ Valor añadido del enfoque con IA:
        No                           Sí
         |                           v
         |                  +---------------------+
-        |                  | ¿Está entre 1 y 12? |
+        |                  | ¿Está entre 1 y 13? |
         |                  +---------------------+
         |                  |                     |
         |                  No                    Sí
@@ -676,7 +745,7 @@ Valor añadido del enfoque con IA:
                            v
            (volver a Bucle principal)
 
-    Si la opción es 12 -> Mostrar despedida y terminar.
+    Si la opción es 13 -> Mostrar despedida y terminar.
 """
     }
     return info
@@ -699,13 +768,13 @@ def main():
         
         # Pedimos la opción al usuario
         try:
-            opcion = int(input("\nSeleccione una opción (1-12): "))
+            opcion = int(input("\nSeleccione una opción (1-13): "))
             
             # Verificamos la opción seleccionada
-            if opcion == 12:
+            if opcion == 13:
                 print("\n¡Gracias por usar el programa!")
                 break
-            elif opcion >= 1 and opcion <= 11:
+            elif opcion >= 1 and opcion <= 12:
                 mostrar_seccion(opcion, info)
             else:
                 print("\nError: Opción no válida")
